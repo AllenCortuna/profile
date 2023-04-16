@@ -1,4 +1,5 @@
 import React from "react";
+import useHint from "./state/hint";
 const letters = [
   "A",
   "l",
@@ -16,6 +17,7 @@ const letters = [
 ];
 
 const Baner = () => {
+  const setStat = useHint((state) => state.setStat);
   return (
     <>
       {/*banner*/}
@@ -27,14 +29,14 @@ const Baner = () => {
             </p>
           ))}
 
-          <p className="text-gray-200 font-[500] text-sm  mt-3 max-w-[20rem] quick">
+          <p className="text-gray-200 font-[500] text-sm  mt-3 max-w-[20rem] quick"
+    onMouseEnter={()=>setStat("info","Basic info")}>
             Front end developer that is specialized in React Js, Prototype
             different project using HTML, CSS and JavaScript. Mastery of
             different frontend framework like Tailwind css and SCSS/SASS.
             Understanding of Git commands and Github.
           </p>
         </div>
-        {/* <div className="-mt-14 rounded-full w-[6rem] h-[6rem] bg-red-500 ml-auto mr-auto"></div> */}
       </span>
     </>
   );
