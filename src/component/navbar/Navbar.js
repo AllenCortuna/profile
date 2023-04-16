@@ -1,5 +1,6 @@
 import React from "react";
 import autoAnimate from "@formkit/auto-animate";
+import Hint from "./Hint";
 
 const Navbar = () => {
   const dom = React.useRef(null);
@@ -16,7 +17,6 @@ const Navbar = () => {
     { name: "contact", desc: "" },
   ];
 
-  const logo = <p className="text-zinc-100 font-semibold ">Logo</p>;
 
   // styling for the navbar items
   // WARN: navlink is in index.css
@@ -25,7 +25,7 @@ const Navbar = () => {
  // content for the navbar 
   const nav = (
     <nav
-      className={`grid gap-2 h-0 p-4 h-full ${
+      className={` my-auto grid gap-2 h-0 p-4 h-full ${
         !isSmallScreen && "grid-cols-4 p-5 py-1"
       }`}
     >
@@ -44,7 +44,7 @@ const Navbar = () => {
     <>
       <div className="">
         <span className="text-[1.4rem] font-[800] flex justify-between px-3 py-2 items-center">
-          {logo}
+          <Hint/>
           <span
             onClick={() => setShowNav(!showNav)}
             className="h-5 w-5 flex flex-wrap align-center justify-center "
@@ -69,7 +69,7 @@ const Navbar = () => {
   const otherScreen = (
     <div>
       <span className="flex flex-wrap justify-between px-3 py-2">
-        {logo} {nav} 
+        <Hint/> {nav} 
       </span>
     </div>
   );
