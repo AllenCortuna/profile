@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Martian+Mono:wght@100;200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* font-family: 'Chivo Mono', monospace; */
+/* font-family: 'DM Sans', sans-serif; */
+/* font-family: 'Jost', sans-serif; */
+/* font-family: 'Karla', sans-serif; */
+/* font-family: 'Martian Mono', monospace; */
+/* font-family: 'Montserrat', sans-serif; */
+/* font-family: 'Quicksand', sans-serif; */
+/* font-family: 'Raleway', sans-serif; */
+/* font-family: 'Source Code Pro', monospace; */
+/* font-family: 'Space Grotesk', sans-serif; */
+/* font-family: 'Space Mono', monospace; */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Montserrat", sans-serif;
+  background: #141816;
+  /* background: #F5F4EE; */
+}
+
+.spacemono {
+  font-family: "Space Mono", sans-serif;
+}
+
+.quick {
+  font-family: "Quicksand", sans-serif;
+}
+
+.gradient-night {
+  background: linear-gradient(to bottom left, #403f44, #1e1b32);
+}
+
+.gradient-green {
+  background: linear-gradient(to bottom left, #45c270, #21cdc3);
+}
+.sposamoke {
+  background: whitesmoke;
+}
+
+@layer components {
+  .btn-mode {
+    @apply text-sm text-gray-400 underline mt-5;
+  }
+}
+
+.banner {
+  height: 20rem;
+  weight: 20rem;
+}
+
+/* banner */
+.letter:hover {
+  filter: drop-shadow(-2px 2px 0px #5e5e5e);
+}
+
+@keyframes navlink {
+  from {
+    margin-left: 5px;
+  }
+  to {
+    margin-left: 0px;
+  }
+}
+
+/* navbar link */
+.navlink:hover {
+  animation-name: navlink;
+  animation-iteration-count: infinite;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+  filter: drop-shadow(-1px 1px 0px gray);
+}
+
+
+
+.zoom-in-out:hover {
+  position: relative;
+  z-index: 1;
+  animation: zoomInOut 1s ease-in-out infinite;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
