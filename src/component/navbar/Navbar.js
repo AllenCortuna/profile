@@ -1,28 +1,32 @@
 import React from "react";
 import autoAnimate from "@formkit/auto-animate";
 import Hint from "./Hint";
+import useHint from "../state/hint";
 
 const Navbar = () => {
+  const setStat = useHint((state) => state.setStat);
   const dom = React.useRef(null);
   const [showNav, setShowNav] = React.useState(false);
 
   React.useEffect(() => {
-    dom.current &&
-      autoAnimate(dom.current)
+    dom.current && autoAnimate(dom.current);
   }, [dom]);
   const isSmallScreen = window.innerWidth <= 440;
   const content = [
-    { name: "home", desc: "" },
-    { name: "works", desc: "" },
-    { name: "contact", desc: "" },
+    { name: "home", desc: "Welcome " },
+    { name: "project", desc: "Project I done" },
+    { name: "contact", desc: "Contact Me " },
   ];
 
+  const handleClick = (stat, hint) => {
+    setStat(stat,hint);
+  };
 
   // styling for the navbar items
   // WARN: navlink is in index.css
   const navlink =
     "text-zinc-100 text-sm font-semibold hover:text-lime-400 font-normal hover:font-[900] transition-all ease-linear lowercase hover:uppercase duration-300";
- // content for the navbar 
+  // content for the navbar
   const nav = (
     <nav
       className={` my-auto grid gap-2 h-0 p-4 h-full ${
@@ -30,8 +34,12 @@ const Navbar = () => {
       }`}
     >
       {content.map((a) => (
-        <span className="flex justify-center content-center w-full md:w-20">
-        <p className={navlink}>{a.name}</p>
+        <span
+          className="flex justify-center content-center w-full md:w-20"
+          onClick={() => handleClick(a.name, a.desc)}
+          onMouseEnter={() => handleClick("info", ("click to see "+ a.name))}
+        >
+          <p className={navlink}>{a.name}</p>
         </span>
       ))}
     </nav>
@@ -44,7 +52,7 @@ const Navbar = () => {
     <>
       <div className="">
         <span className="text-[1.4rem] font-[800] flex justify-between px-3 py-2 items-center">
-          <Hint/>
+          <Hint />
           <span
             onClick={() => setShowNav(!showNav)}
             className="h-5 w-5 flex flex-wrap align-center justify-center "
@@ -69,7 +77,7 @@ const Navbar = () => {
   const otherScreen = (
     <div>
       <span className="flex flex-wrap justify-between px-3 py-2">
-        <Hint/> {nav} 
+        <Hint /> {nav}
       </span>
     </div>
   );
