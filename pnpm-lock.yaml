@@ -12,7 +12,6 @@ specifiers:
   offline: ^0.0.1
   postcss: ^8.4.14
   react: ^18.2.0
-  react-animation-on-scroll: ^5.1.0
   react-dom: ^18.2.0
   react-icons: ^4.4.0
   react-router-dom: ^6.3.0
@@ -31,7 +30,6 @@ dependencies:
   axios: 0.27.2
   offline: 0.0.1
   react: 18.2.0
-  react-animation-on-scroll: 5.1.0_react@18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-icons: 4.4.0_react@18.2.0
   react-router-dom: 6.3.0_biqbaboplfbrettd7655fr4n2y
@@ -6519,10 +6517,6 @@ packages:
     resolution: {integrity: sha512-HDWXG8isMntAyRF5vZ7xKuEvOhT4AhlRt/3czTSjvGUxjYCBVRQY48ViDHyfYz9VIoBkW4TMGQNapx+l3RUwdA==}
     dev: false
 
-  /lodash.throttle/4.1.1:
-    resolution: {integrity: sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==}
-    dev: false
-
   /lodash.uniq/4.5.0:
     resolution: {integrity: sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==}
     dev: false
@@ -7990,15 +7984,6 @@ packages:
       http-errors: 2.0.0
       iconv-lite: 0.4.24
       unpipe: 1.0.0
-    dev: false
-
-  /react-animation-on-scroll/5.1.0_react@18.2.0:
-    resolution: {integrity: sha512-UBhlXUig+AGwDpRoqFC6qFh1mCIperwy1Pk7dJTb0XgpDzERF4f6fhoqFY2+on9Bf1n4OfUrRw4xsnKfQt6U7w==}
-    peerDependencies:
-      react: '>= 15.4.1'
-    dependencies:
-      lodash.throttle: 4.1.1
-      react: 18.2.0
     dev: false
 
   /react-app-polyfill/3.0.0:
