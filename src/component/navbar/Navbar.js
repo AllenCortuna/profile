@@ -37,7 +37,7 @@ const Navbar = () => {
         <span
           className="flex justify-center content-center w-full md:w-20"
           onClick={() => handleClick(a.name, a.desc)}
-          onMouseEnter={() => handleClick("info", ("click to see "+ a.name))}
+          // onMouseEnter={() => handleClick("info", ("click to see "+ a.name))}
         >
           <p className={navlink}>{a.name}</p>
         </span>
