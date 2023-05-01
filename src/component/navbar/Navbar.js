@@ -2,6 +2,7 @@ import React from "react";
 import autoAnimate from "@formkit/auto-animate";
 import Hint from "./Hint";
 import useHint from "../state/hint";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const setStat = useHint((state) => state.setStat);
@@ -13,13 +14,13 @@ const Navbar = () => {
   }, [dom]);
   const isSmallScreen = window.innerWidth <= 440;
   const content = [
-    { name: "home", desc: "Welcome " },
-    { name: "project", desc: "List of Project" },
-    { name: "contact", desc: "Contact Me " },
+    { name: "home", to: "", desc: "Welcome " },
+    { name: "project", to: "project", desc: "List of Project" },
+    { name: "contact", to: "contact", desc: "Contact Me " },
   ];
 
   const handleClick = (stat, hint) => {
-    setStat(stat,hint);
+    setStat(stat, hint);
   };
 
   // styling for the navbar items
@@ -29,18 +30,18 @@ const Navbar = () => {
   // content for the navbar
   const nav = (
     <nav
-      className={` my-auto grid gap-2 h-0 p-4 h-full ${
-        !isSmallScreen && "grid-cols-4 p-5 py-1"
-      }`}
+      className={` my-auto grid gap-2 h-0 p-4 h-full ${!isSmallScreen && "grid-cols-4 p-5 py-1"
+        }`}
     >
       {content.map((a) => (
-        <span
+        <Link
+          to={`/${a.to}`}
           className="flex justify-center content-center w-full md:w-20"
           onClick={() => handleClick(a.name, a.desc)}
-          // onMouseEnter={() => handleClick("info", ("click to see "+ a.name))}
+        // onMouseEnter={() => handleClick("info", ("click to see "+ a.name))}
         >
           <p className={navlink}>{a.name}</p>
-        </span>
+        </Link>
       ))}
     </nav>
   );
@@ -58,14 +59,12 @@ const Navbar = () => {
             className="h-5 w-5 flex flex-wrap align-center justify-center "
           >
             <span
-              className={`${toggleCls}${
-                showNav && "h-5 border bg-zinc-800 rotate-45 bg-transparent "
-              }`}
+              className={`${toggleCls}${showNav && "h-5 border bg-zinc-800 rotate-45 bg-transparent "
+                }`}
             ></span>
             <span
-              className={`${toggleCls}${
-                showNav && "h-5 border -mt-3 rotate-45 bg-zinc-200 "
-              }`}
+              className={`${toggleCls}${showNav && "h-5 border -mt-3 rotate-45 bg-zinc-200 "
+                }`}
             ></span>
           </span>
         </span>
