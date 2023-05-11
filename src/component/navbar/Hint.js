@@ -13,6 +13,7 @@ const Hint = () => {
   const speed = 50;
   let i = 0;
 
+  // function that display hint
   const typeWriter = useCallback(() => {
     if (i < text.length) {
       document.getElementById("typewriter").innerHTML += text.charAt(i);

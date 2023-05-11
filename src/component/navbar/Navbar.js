@@ -82,7 +82,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className=" bg-zinc-800 grid w-screen h-auto fixed top-0 " ref={dom}>
+    <div className=" bg-zinc-800 grid w-screen h-auto fixed top-0 z-50 shadow-lg " ref={dom}>
       {isSmallScreen ? smallScreen : otherScreen}
     </div>
   );
