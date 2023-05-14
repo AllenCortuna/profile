@@ -4,7 +4,7 @@ import { TbBrandJavascript } from 'react-icons/tb'
 import { SiSass, SiTailwindcss, SiPython,SiCodio, SiMui } from 'react-icons/si'
 
 const Skills = () => {
- return <div className="grid grid-cols-1 md:grid-cols-2 justify-center content-start flex-col gap-20 p-4 pt-20 " id="f-skill">
+ return <div className="grid grid-cols-1 md:grid-cols-2 justify-center content-start flex-col gap-20 p-4 mt-28 pt-20" id="f-skill">
 
   <Motion text={"Javascript"}
    isLeft={true}

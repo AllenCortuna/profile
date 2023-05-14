@@ -7,7 +7,6 @@ import {BsCaretDownFill} from 'react-icons/bs';
 
 const Baner = () => {
 
-
   const variant = {
     visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
     hidden: { opacity: 0, scale: 0 }
@@ -19,6 +18,8 @@ const Baner = () => {
   const scrollToElement = () => {
     var element = document.getElementById("f-skill");
     element.scrollIntoView();
+    setStat("info", "List of Skills")
+     
   }
 
 
@@ -42,12 +43,14 @@ const Baner = () => {
           variants={variant}
           initial="hidden"
           animate={control}
-          className=" p-4 w-auto border-box rounded-tr-lg rounded-tl-lg rounded-bl-3xl rounded-br-3xl text-center">
+          className=" p-4 w-auto border-box text-center">
+         <span className="mx-auto">
           {letters.map((letter) => (
             <p className="mt-5 text-white text-xl font-[800] text-[3.4rem] md:text-[4rem] leading-[2.6rem] md:leading-[4rem] hover:text-lime-400 md:text-[4.6rem] hover:text-[4.4rem] md:hover:text-[5.2rem] letter transition-all ease-linear duration-400 hover:animate-bounce inline uppercase mx-[.1rem]">
               {letter}
             </p>
           ))}
+          </span> 
 
           <p className="text-gray-200 font-[400] space md:text-md text-sm mt-3 max-w-[30rem] mx-auto pt-5 md:pt-10"
             onMouseEnter={() => setStat("info", "Basic info")}>
@@ -58,7 +61,7 @@ const Baner = () => {
           </p>
         </motion.div>
 
-        <button className="mt-14 border border-2 rounded-full p-4 text-center bg-none text-white w-[10rem] mx-auto space font-[700] flex flex-row justify-center content-center gap-3 hover:bg-zinc-200 hover:text-black transition-all ease-linear duration-400"
+        <button className="mt-10 border border-2 rounded-full p-4 text-center bg-none text-white w-[10rem] mx-auto space font-[700] flex flex-row justify-center content-center gap-3 hover:bg-zinc-200 hover:text-black transition-all ease-linear duration-400"
           onClick={scrollToElement}> 
           skills
           
