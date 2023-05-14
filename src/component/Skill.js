@@ -6,7 +6,7 @@ import {  MdSpaceDashboard} from 'react-icons/md'
 import { SiSass, SiTailwindcss, SiPython,SiCodio } from 'react-icons/si'
 
 const Skills = () => {
- return <div className="flex justify-center content-start flex-col gap-20 p-4 pt-20 ">
+ return <div className="grid grid-cols-1 md:grid-cols-2 justify-center content-start flex-col gap-20 p-4 pt-20 ">
 
   <Motion text={"Javascript"}
    isLeft={true}

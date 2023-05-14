@@ -15,6 +15,12 @@ const Baner = () => {
   const [ref, inView] = useInView()
   const setStat = useHint((state) => state.setStat);
 
+  const scrollToElement = () => {
+    var element = document.getElementById("f-skill");
+    element.scrollIntoView();
+  }
+
+
   useEffect(() => {
     if (inView) {
       control.start("visible");
@@ -23,13 +29,13 @@ const Baner = () => {
       control.start("hidden");
     }
   }, [control, inView]);
-  
+
   const letters = ["A", "l", "l", "e", "n", " ", "C", "o", "r", "t", "u", "n", "a",];
 
   return (
     <>
       {/*banner*/}
-      <span className="flex justify-center content-top gap-5 mt-40">
+      <span className="flex flex-col justify-center content-top gap-5 mt-40">
         <motion.div
           ref={ref}
           variants={variant}
@@ -50,6 +56,9 @@ const Baner = () => {
             Understanding of Git commands and Github.
           </p>
         </motion.div>
+
+        <button className="mt-14 border border-2 rounded-full p-5 text-center bg-none text-white w-[12rem] mx-auto"
+          onClick={scrollToElement} id="f-skill"> skills </button>
       </span>
     </>
   );
