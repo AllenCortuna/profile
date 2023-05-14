@@ -2,7 +2,7 @@ import { create } from "zustand";
 
 const useHint = create((set) => ({
   stat: "info",
-  hint: " hover or click any element for hint !!",
+  hint: "Greetings !",
   setStat: (newStat, newHint) => set(() => ({ stat: newStat, hint: newHint })),
 }));
 
