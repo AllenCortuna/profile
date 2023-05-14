@@ -1,34 +1,33 @@
-
 import Motion from "./motion/Motion";
 import { FaCss3Alt, FaGitAlt } from 'react-icons/fa'
 import { TbBrandJavascript } from 'react-icons/tb'
-import {  MdSpaceDashboard} from 'react-icons/md'
-import { SiSass, SiTailwindcss, SiPython,SiCodio } from 'react-icons/si'
+import { SiSass, SiTailwindcss, SiPython,SiCodio, SiMui } from 'react-icons/si'
 
 const Skills = () => {
- return <div className="grid grid-cols-1 md:grid-cols-2 justify-center content-start flex-col gap-20 p-4 pt-20 ">
+ return <div className="grid grid-cols-1 md:grid-cols-2 justify-center content-start flex-col gap-20 p-4 pt-20 " id="f-skill">
 
   <Motion text={"Javascript"}
    isLeft={true}
+   color={"amber-400"}
    image={<TbBrandJavascript />} />
 
-  <Motion text={"CSS"}
-   isLeft={true}
+  <Motion text={"Css"}
+   isLeft={false}
    image={<FaCss3Alt />} />
 
   <Motion text={"Python"} 
-   isLeft={false} 
+   isLeft={true} 
    image={<SiPython />} />
 
   <Motion text={"CProgramming"} 
-   isLeft={true} 
+   isLeft={false} 
    image={<SiCodio />} />
 
   <Motion text={"Git"} 
-   isLeft={false} 
+   isLeft={true} 
    image={<FaGitAlt />} />
 
-  <Motion text={"SCSS/SASS"} 
+  <Motion text={"Scss/Sass"} 
    isLeft={false} 
    image={<SiSass />} />
 
@@ -38,7 +37,7 @@ const Skills = () => {
 
   <Motion text={"MaterialUI"} 
    isLeft={false} 
-   image={<MdSpaceDashboard />} />
+   image={<SiMui />} />
   
  </div>
 }

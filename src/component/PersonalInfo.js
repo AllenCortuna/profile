@@ -3,6 +3,7 @@ import useHint from "./state/hint";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import {BsCaretDownFill} from 'react-icons/bs';
 
 const Baner = () => {
 
@@ -43,12 +44,12 @@ const Baner = () => {
           animate={control}
           className=" p-4 w-auto border-box rounded-tr-lg rounded-tl-lg rounded-bl-3xl rounded-br-3xl text-center">
           {letters.map((letter) => (
-            <p className="mt-5 text-white text-xl font-[800] text-[3.2rem] md:text-[4rem] leading-[2rem] md:leading-[4rem] hover:text-lime-400 md:text-[4.6rem] hover:text-[3.8rem] md:hover:text-[5.2rem] letter transition-all ease-linear duration-400 hover:animate-bounce inline uppercase mx-[.1rem]">
+            <p className="mt-5 text-white text-xl font-[800] text-[3.4rem] md:text-[4rem] leading-[2.6rem] md:leading-[4rem] hover:text-lime-400 md:text-[4.6rem] hover:text-[4.4rem] md:hover:text-[5.2rem] letter transition-all ease-linear duration-400 hover:animate-bounce inline uppercase mx-[.1rem]">
               {letter}
             </p>
           ))}
 
-          <p className="text-gray-200 font-[500] md:text-lg text-md mt-3 max-w-[30rem] quick mx-auto pt-5 md:pt-10"
+          <p className="text-gray-200 font-[400] space md:text-md text-sm mt-3 max-w-[30rem] mx-auto pt-5 md:pt-10"
             onMouseEnter={() => setStat("info", "Basic info")}>
             Front end developer that is specialized in React Js, Prototype
             different project using HTML, CSS and JavaScript. Mastery of
@@ -57,8 +58,13 @@ const Baner = () => {
           </p>
         </motion.div>
 
-        <button className="mt-14 border border-2 rounded-full p-5 text-center bg-none text-white w-[12rem] mx-auto"
-          onClick={scrollToElement} id="f-skill"> skills </button>
+        <button className="mt-14 border border-2 rounded-full p-4 text-center bg-none text-white w-[10rem] mx-auto space font-[700] flex flex-row justify-center content-center gap-3 hover:bg-zinc-200 hover:text-black transition-all ease-linear duration-400"
+          onClick={scrollToElement}> 
+          skills
+          
+          <BsCaretDownFill className="mt-1"/>
+
+        </button>
       </span>
     </>
   );

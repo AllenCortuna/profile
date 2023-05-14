@@ -40,7 +40,7 @@ const Hint = () => {
         {stat === "project" && <HiFolderOpen />}
         {stat === "info" && <FaInfoCircle />}
       </span>
-      <p className="text-white my-auto text-xs font-[400]" id="typewriter"></p>
+      <p className="text-white my-auto text-xs font-[400] space" id="typewriter"></p>
     </span>
   );
 };
