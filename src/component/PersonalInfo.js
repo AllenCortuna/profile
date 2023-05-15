@@ -13,6 +13,7 @@ const Baner = () => {
   }
   const control = useAnimation()
   const [ref, inView] = useInView()
+  
   const setStat = useHint((state) => state.setStat);
 
   const scrollToElement = () => {
@@ -46,7 +47,10 @@ const Baner = () => {
           className="flex flex-col p-4 w-auto text-center">
           <span className="w-auto text-center">
           {letters.map((letter) => (
-            <p className="mt-5 text-white font-[800] text-[3.5rem] md:text-[4rem] leading-[2.8rem] md:leading-[4rem] hover:text-lime-400 md:text-[4.6rem] hover:text-[4.4rem] md:hover:text-[5.2rem] letter transition-all ease-linear duration-400 hover:animate-bounce inline uppercase mx-[0.1rem]">
+            <p className="mt-5 text-white font-[800] text-[3.5rem] md:text-[4rem] leading-[2.8rem] md:leading-[4rem] hover:text-lime-400 md:text-[4.6rem] hover:text-[4.4rem] md:hover:text-[5.2rem] letter transition-all ease-linear duration-400 hover:animate-bounce inline uppercase mx-[0.1rem]"
+                onClick={()=> setStat("info","Full Name")}
+
+              >
               {letter}
             </p>
           ))}
