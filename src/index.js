@@ -3,18 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Helmet } from 'react-helmet';
-import profile from './component/img/profile.png'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Helmet>
-      <meta property="og:title" content="Allen" />
-      <meta property="og:description" content="Allen Cortuna Resume" />
-      <meta property="og:image" content={profile} />
-    </Helmet>
     <App />
   </React.StrictMode>
 );
