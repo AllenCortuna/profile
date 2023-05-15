@@ -26,8 +26,9 @@ const Motion = ({ text, isLeft, image,color }) => {
   }, [control, inView]);
   
   const setStat = useHint((state) => state.setStat);
-  
-  const cls = String(`h-[8rem] w-[10rem] flex flex-col text-[1rem] text-white border border-zinc-300 bg-zinc-800 rounded-lg font-bold z-0 bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg ${color}`) 
+  // glassmorphism
+  // bg-opacity-20 backdrop-blur-lg
+  const cls = String(`transition-all ease-linear duration-300 h-[8rem] w-[10rem] flex flex-col text-[1rem] text-white border hover:border-2 border-zinc-300 bg-zinc-900 rounded-lg font-bold z-0  rounded drop-shadow-lg hover:bg-zinc-900 ${color}`) 
   return (
     <motion.div
       ref={ref}

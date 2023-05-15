@@ -43,14 +43,14 @@ const Baner = () => {
           variants={variant}
           initial="hidden"
           animate={control}
-          className=" p-4 w-auto border-box text-center">
-         <span className="mx-auto">
+          className="flex flex-col p-4 w-auto text-center">
+          <span className="w-auto text-center">
           {letters.map((letter) => (
-            <p className="mt-5 text-white text-xl font-[800] text-[3.5rem] md:text-[4rem] leading-[2.6rem] md:leading-[4rem] hover:text-lime-400 md:text-[4.6rem] hover:text-[4.4rem] md:hover:text-[5.2rem] letter transition-all ease-linear duration-400 hover:animate-bounce inline uppercase mx-[.1rem]">
+            <p className="mt-5 text-white text-xl font-[800] text-[3.6rem] md:text-[4rem] leading-[2.6rem] md:leading-[4rem] hover:text-lime-400 md:text-[4.6rem] hover:text-[4.4rem] md:hover:text-[5.2rem] letter transition-all ease-linear duration-400 hover:animate-bounce inline uppercase mx-[0.1rem]">
               {letter}
             </p>
           ))}
-          </span> 
+          </span>
 
           <p className="text-gray-200 font-[400] w-[18rem] space md:text-md text-sm mt-3 md:w-[22rem] mx-auto pt-5 md:pt-10"
             onMouseEnter={() => setStat("info", "Basic info")}>
