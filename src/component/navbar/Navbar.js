@@ -2,21 +2,27 @@ import React from "react";
 import autoAnimate from "@formkit/auto-animate";
 import Hint from "./Hint";
 import useHint from "../state/hint";
-import { Link } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const setStat = useHint((state) => state.setStat);
   const dom = React.useRef(null);
   const [showNav, setShowNav] = React.useState(false);
 
+  // current page name
+  const location = useLocation();
+  const currentPage = location.pathname;
+ 
+
   React.useEffect(() => {
     dom.current && autoAnimate(dom.current);
   }, [dom]);
+  
   const isSmallScreen = window.innerWidth <= 440;
   const content = [
-    { name: "home", to: "", desc: "Welcome " },
-    { name: "project", to: "project", desc: "List of Project" },
-    { name: "contact", to: "contact", desc: "Contact Me " },
+    { name: "home", to: "", desc: "Welcome ",pageName: "/" },
+    { name: "project", to: "project", desc: "List of Project", pageName: "/project" },
+    { name: "contact", to: "contact", desc: "Contact Me ", pageName: "/contact" },
   ];
 
   const handleClick = (stat, hint) => {
@@ -26,7 +32,10 @@ const Navbar = () => {
   // styling for the navbar items
   // WARN: navlink is in index.css
   const navlink =
-    "text-zinc-100 text-sm font-semibold hover:text-lime-400 font-normal hover:font-[900] transition-all ease-linear lowercase hover:uppercase duration-300";
+    "text-zinc-300 text-sm font-semibold hover:text-zinc-100 font-normal hover:font-[900] transition-all ease-linear lowercase hover:uppercase duration-300";
+  const activeNavlink =
+    "text-lime-400 text-sm font-[900] transition-all ease-linear uppercase";
+  
   // content for the navbar
   const nav = (
     <nav
@@ -38,9 +47,8 @@ const Navbar = () => {
           to={`/${a.to}`}
           className="flex justify-center content-center w-full md:w-20"
           onClick={() => handleClick(a.name, a.desc)}
-        // onMouseEnter={() => handleClick("info", ("click to see "+ a.name))}
         >
-          <p className={navlink}>{a.name}</p>
+          <p className={currentPage === (a.pageName) ?activeNavlink :navlink}>{a.name}</p>
         </Link>
       ))}
     </nav>
