@@ -29,6 +29,7 @@ const Motion = ({ text, isLeft, image, color }) => {
   const cls = `transition-all ease-linear duration-300 h-[8rem] w-[10rem] flex flex-col text-[1rem] text-white border hover:border-4 border-zinc-300 bg-zinc-900 rounded-lg font-bold z-0  rounded drop-shadow-lg ${color}`;
   
   return (
+    <div className="hover:rotate-[360deg] transition-all ease-linear duration-300 ">
     <motion.div
       ref={ref}
       variants={isLeft ? leftVariant : rightVariant}
@@ -41,6 +42,7 @@ const Motion = ({ text, isLeft, image, color }) => {
 
       <p className="text-center m-auto space ">{text}</p>
     </motion.div>
+    </div>
   );
 };
 

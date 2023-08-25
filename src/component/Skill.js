@@ -5,8 +5,9 @@ import {
  SiSass,
  SiTailwindcss,
  SiPython,
- SiCodio,
+ // SiCodio,
  SiMui,
+ SiNotion
 } from "react-icons/si";
 
 const Skills = () => {
@@ -36,11 +37,18 @@ const Skills = () => {
     image={<SiPython />}
    />
 
+   {/* <Motion */}
+   {/*  text={"CProgramming"} */}
+   {/*  isLeft={false} */}
+   {/*  color={"hover:border-indigo-400 hover:text-indigo-400"} */}
+   {/*  image={<SiCodio />} */}
+   {/* /> */}
+   
    <Motion
-    text={"CProgramming"}
+    text={"Notion"}
     isLeft={false}
-    color={"hover:border-indigo-400 hover:text-indigo-400"}
-    image={<SiCodio />}
+    color={"hover:border-lime-100 hover:text-lime-100"}
+    image={<SiNotion />}
    />
 
    <Motion
