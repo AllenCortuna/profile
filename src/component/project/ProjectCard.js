@@ -20,13 +20,17 @@ const ProjectCard = ({ image, title, desc }) => {
             alt="notfound"
             className="w-full h-[10rem] object-cover rounded-lg border-white border"
           />
-          <p className="text-white text-xs font-[600] mt-2 mr-2 drop-shadow-md">{title}</p>
+          <p className="text-white text-sm space font-[700] mt-2 ml-2 drop-shadow-md"><b>{title}</b></p>
         </div>
 
         {/* Back content */}
-        <div className="card-back rounded-lg border border-zinc-100 flex flex-col p-3">
-          <h1 className="text-white text-sm font-[600] ">{title}</h1>
-          <p className="text-white text-xs font-[500] text-zinc-400 mt-2 ">{desc}</p>
+        <div className="card-back rounded-lg border border-zinc-100 flex flex-col p-3 justify-start">
+          <h1 className="text-white text-sm font-[800] ">{title}</h1>
+          <p className="text-white text-xs font-[500] text-zinc-300 mt-2 space ">{desc}</p>
+          <span className="space p-3 py-2 rounded-xl text-white text-center hover:font-[900] hover:text-amber-400 place-self-end mt-auto mb-0 underline ">
+            
+            back
+          </span>
 
         </div>
       </div>

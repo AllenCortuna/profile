@@ -87,11 +87,11 @@ const Baner = () => {
               className="text-gray-200 font-[400] text-start space md:text-md text-sm "
               onMouseEnter={() => setStat("info", "Objective and Experience")}
             >
-              Experienced front-end developer with specialization in React JS,
-              adept at crafting diverse projects utilizing HTML, CSS, and
-              JavaScript. Proficient in a range of frontend frameworks,
-              including Tailwind CSS and SCSS/SASS. Demonstrates a comprehensive
-              grasp of Git commands and GitHub workflows.
+              Experienced front-end developer with specialization in <b>React JS</b>,
+              adept at crafting diverse projects utilizing <b>HTML, CSS,</b> and 
+              <b> JavaScript</b>. Proficient in a range of frontend frameworks,
+              including <b>Tailwind CSS</b> and <b>SCSS/SASS</b>. Demonstrates a comprehensive
+              grasp of <b>Git</b> commands and <b>GitHub</b> workflows.
             </p>
           </span>
         </motion.div>
