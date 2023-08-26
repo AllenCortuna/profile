@@ -1,37 +1,50 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-const ContactUs = () => {
+const Contact = () => {
   const form = useRef();
+  const [data, setData] = useState({
+    name: " ",
+    email: "",
+    message: "",
+  });
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_rkc57gf",
+        "template_kwxaqyo",
         form.current,
-        "YOUR_PUBLIC_KEY",
+        "xNnpkLN27sfOrM_cG",
       )
       .then(
         (result) => {
           console.log(result.text);
+          alert("Email Sent!");
+          setData({ name: "", email: "", message: "" });
         },
         (error) => {
           console.log(error.text);
+          // alert(error.text);
         },
       );
   };
 
-  const label = "text-white text-md font-[600] mt-5 mb-2 space";
-  const input = "rounded-lg p-2 text-md bg-zinc-700 ";
+  const handleChange = (e) => {
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
+
+  const label = "text-white text-lg font-[600] mt-5 mb-2 space";
+  const input =
+    "rounded-lg p-2 text-md bg-zinc-700 outline-none border-2 border-zinc-700 focus:border-lime-300 text-zinc-200 font-[500] text-sm quick ";
   return (
-    <span className="mt-36 md:mt-44 flex justify-center w-full">
+    <span className="mt-36 mb-20 md:mt-44 flex justify-center w-full px-4">
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="p-4 flex flex-col rounded-lg w-[20rem] md:w-[24rem] border border-zinc-500 bg-zinc-800 bg-opacity-30 "
+        className="p-4 flex flex-col rounded-lg w-full max-w-[26rem] border border-zinc-500 bg-zinc-800 bg-opacity-30 "
       >
         <span className="font-[800] text-xl text-lime-300 mb-5 w-full flex flex-col">
           Contact
@@ -39,18 +52,41 @@ const ContactUs = () => {
           <span className="h-[0.2rem] w-full mt-[1.2rem] bg-gradient-to-l from-transparent to-lime-300 opacity-90"></span>
         </span>
         <label className={label}>Name</label>
-        <input type="text" name="user_name" className={input} />
+        <input
+          type="text"
+          name="name"
+          value={data.name}
+          className={input}
+          onChange={handleChange}
+        />
         <label className={label}>Email</label>
-        <input type="email" name="user_email" className={input} />
+        <input
+          type="email"
+          name="email"
+          value={data.email}
+          className={input}
+          onChange={handleChange}
+        />
         <label className={label}>Message</label>
-        <textarea name="message" className={input} />
+        <textarea
+          rows={4}
+          name="message"
+          value={data.message}
+          className={input}
+          onChange={handleChange}
+          // onChange={(e) => handleChange(e)}
+        />
 
         <span className="h-[0.2rem] w-full mt-[1.2rem] bg-gradient-to-l from-transparent to-lime-300 opacity-90"></span>
 
-        <input type="submit" value="Send" className="text-md border border-lime-300 p-2 px-6 rounded-full text-lime-300 font-[700] mr-auto my-4 hover:text-black hover:bg-amber-300 hover:border-amber-300 " />
+        <input
+          type="submit"
+          value="Send"
+          className="text-md border border-lime-300 p-2 px-6 rounded-full text-lime-300 font-[700] mx-auto my-4 hover:text-black hover:bg-amber-300 hover:border-amber-300 "
+        />
       </form>
     </span>
   );
 };
 
-export default ContactUs;
+export default Contact;
