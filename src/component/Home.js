@@ -21,12 +21,13 @@ const Home = () => {
         <PersonalInfo/>
         <Skills/>
         <button
-          className="mt-20 border rounded-xl p-3 text-center bg-none text-white w-[10rem] mx-auto space font-[700] text-xs flex flex-row justify-center content-center gap-3 hover:bg-amber-300 hover:border-amber-300 hover:text-black transition-all ease-linear duration-300"
+          className="mt-20 border rounded-full p-3 text-center bg-none text-white w-[10rem] mx-auto space font-[700] text-xs flex flex-row justify-center content-center gap-3 hover:bg-amber-300 hover:border-amber-300 hover:text-black transition-all ease-linear duration-300"
           
           onClick={scrollToTop}
         >
-          scroll to top
-          <FaArrowAltCircleUp className="mt-1 animate-bounce" />
+          <p className="animate-bounce">
+          scroll to top</p>
+          <FaArrowAltCircleUp className="animate-bounce mt-0.5" />
         </button>
       </div>
     </div>

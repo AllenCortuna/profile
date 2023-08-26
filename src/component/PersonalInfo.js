@@ -78,9 +78,10 @@ const Baner = () => {
             ))}
           </span>
           <span className="flex flex-row mt-3 md:w-[22rem] w-[16rem] justify-center h-auto mx-auto md:pt-10 gap-4">
+            {/* line fade art */}
             <span className="flex flex-col w-5 h-auto">
               <span className="w-3 bg-white h-3 rounded-full"></span>
-              <span className="w-1 h-36 bg-gradient-to-t from-transparent to-white opacity-90 -mt-2 ml-1"></span>
+              <span className="w-1 h-full bg-gradient-to-t from-transparent to-white opacity-90 -mt-2 ml-1"></span>
 
             </span>
             <p
@@ -100,8 +101,8 @@ const Baner = () => {
           className="mt-10 border border-2 rounded-full p-4 text-center bg-none text-white w-[10rem] mx-auto space font-[700] flex flex-row justify-center content-center gap-3 hover:bg-amber-300 hover:border-zinc-900 hover:text-black transition-all ease-linear duration-400 "
           onClick={scrollToElement}
         >
-          skills
-          <FaArrowAltCircleDown className="mt-1 animate-bounce text-md" />
+          <p className="animate-bounce">skills</p>
+          <FaArrowAltCircleDown className="animate-bounce mt-0.5" />
         </button>
       </span>
     </>
