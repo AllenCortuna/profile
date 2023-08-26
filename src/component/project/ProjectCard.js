@@ -25,16 +25,17 @@ const ProjectCard = ({ image, title, desc, git, link }) => {
           <p className="text-white text-sm space font-[700] mt-2 ml-2 drop-shadow-md ">
             {title}
           </p>
+          <span className="h-[0.2rem] w-full mx-2 bg-gradient-to-l from-transparent to-lime-600 opacity-90"></span>
 
           <span className="pt-8 flex justify-start px-2 gap-4 ">
-           {/* github */}
+            {/* github */}
             <a
               className="border rounded-lg border-white p-2 hover:bg-amber-400 text-white hover:text-zinc-700 hover:border-amber-400 hover:shadow-lg"
               href={git}
             >
               <BsGithub className="w-4 h-auto" />
             </a>
-           {/* link  */}
+            {/* link  */}
             <a
               className="border rounded-lg border-white p-2 hover:bg-amber-400 text-white hover:text-zinc-700 hover:border-amber-400 hover:shadow-lg"
               href={link}

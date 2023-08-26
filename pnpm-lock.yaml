@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@emailjs/browser':
+    specifier: ^3.11.0
+    version: 3.11.0
   '@formkit/auto-animate':
     specifier: 1.0.0-beta.3
     version: 1.0.0-beta.3
@@ -26,9 +29,6 @@ dependencies:
   axios:
     specifier: ^0.27.2
     version: 0.27.2
-  emailjs:
-    specifier: ^4.0.2
-    version: 4.0.2(typescript@5.2.2)
   framer-motion:
     specifier: ^10.12.10
     version: 10.12.10(react-dom@18.2.0)(react@18.2.0)
@@ -1618,6 +1618,11 @@ packages:
       postcss-selector-parser: ^6.0.10
     dependencies:
       postcss-selector-parser: 6.0.12
+    dev: false
+
+  /@emailjs/browser@3.11.0:
+    resolution: {integrity: sha512-RkY3FKZ3fPdK++OeF46mRTFpmmQWCHUVHZH209P3NE4D5sg2Atg7S2wa3gw5062Gl4clt4Wn5SyC4WhlVZC5pA==}
+    engines: {node: '>=14.0.0'}
     dev: false
 
   /@emotion/is-prop-valid@0.8.8:
@@ -4355,18 +4360,6 @@ packages:
 
   /electron-to-chromium@1.4.394:
     resolution: {integrity: sha512-0IbC2cfr8w5LxTz+nmn2cJTGafsK9iauV2r5A5scfzyovqLrxuLoxOHE5OBobP3oVIggJT+0JfKnw9sm87c8Hw==}
-
-  /emailjs@4.0.2(typescript@5.2.2):
-    resolution: {integrity: sha512-w/tldI93qO7uw9XzdwCCRR36OY/TYJxB81vEOmQkmxVDZOdrAnoQoOAvaMoDmmBUSoD1msyAIwBdKFWzC7lgKQ==}
-    engines: {node: '>=12'}
-    peerDependencies:
-      typescript: '>=4.3.5'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      typescript: 5.2.2
-    dev: false
 
   /emittery@0.10.2:
     resolution: {integrity: sha512-aITqOwnLanpHLNXZJENbOgjUBeHocD+xsSJmNrjovKBW5HbSpW3d1pEls7GFQPUWXiwG9+0P4GtHfEqC/4M0Iw==}
