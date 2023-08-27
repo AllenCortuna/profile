@@ -117,7 +117,7 @@ const Baner = () => {
         </span>
 
         <button
-          className="mt-10 border border-2 rounded-full p-4 px-6 text-center bg-none text-white mx-auto space font-[700] flex flex-row justify-center content-center gap-1 hover:bg-amber-300 hover:border-zinc-900 hover:text-black transition-all ease-linear duration-400 animate-bounce"
+          className="mt border border-2 rounded-full p-4 px-6 text-center bg-none text-white mx-auto space font-[700] flex flex-row justify-center content-center gap-1 hover:bg-amber-300 hover:border-zinc-900 hover:text-black transition-all ease-linear duration-400 animate-bunce"
           onClick={scrollToElement}
         >
           <RiHomeFill className="mt-1 rotate-[180deg]" />
