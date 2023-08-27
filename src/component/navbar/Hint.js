@@ -31,8 +31,15 @@ const Hint = () => {
       document.getElementById("typewriter").innerHTML = "";
     };
   }, [stat, hint, typeWriter]);
+
+  const setStat = useHint((state) => state.setStat);
+
   return (
-    <Link className="flex justify-start gap-2 content-center" to={"/"}>
+    <Link
+      className="flex justify-start gap-2 content-center"
+      to={"/"}
+      onClick={() => setStat("home", "Welcome !")}
+    >
       {/* status */}
 
       <span className="text-amber-500 rounded-xl p-1 drop=shadow-md text-3xl">
