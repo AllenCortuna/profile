@@ -4,6 +4,7 @@ import { HiFolderOpen } from "react-icons/hi";
 import { MdPermContactCalendar } from "react-icons/md";
 import { FaInfoCircle } from "react-icons/fa";
 import { BsPersonCircle } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Hint = () => {
   const stat = useHint((state) => state.stat);
@@ -22,7 +23,7 @@ const Hint = () => {
     } else {
       document.getElementById("typewriter").style.opacity = 1;
     }
-  },[i, text]);
+  }, [i, text]);
 
   useEffect(() => {
     typeWriter();
@@ -31,7 +32,7 @@ const Hint = () => {
     };
   }, [stat, hint, typeWriter]);
   return (
-    <span className="flex justify-start gap-2 content-center">
+    <Link className="flex justify-start gap-2 content-center" to={"/"}>
       {/* status */}
 
       <span className="text-amber-500 rounded-xl p-1 drop=shadow-md text-3xl">
@@ -40,8 +41,11 @@ const Hint = () => {
         {stat === "project" && <HiFolderOpen />}
         {stat === "info" && <FaInfoCircle />}
       </span>
-      <p className="text-white my-auto text-xs font-[400] space" id="typewriter"></p>
-    </span>
+      <p
+        className="text-white my-auto text-xs font-[400] space"
+        id="typewriter"
+      ></p>
+    </Link>
   );
 };
 

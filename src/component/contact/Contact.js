@@ -33,7 +33,7 @@ const Contact = () => {
             setLoading(false);
           },
           (error) => {
-            // console.log(error.text);
+            console.log(error.text);
             errorToast(error.text)
           },
         );
@@ -58,7 +58,7 @@ const Contact = () => {
         <span className="font-[800] text-xl text-lime-300 mb-5 w-full flex flex-col">
           Contact
           <p className="text-zinc-300 font-[300] text-xs">
-            Send your contact info and message
+            Send your contact info and inquires
           </p>
           <span className="h-[0.2rem] w-full mt-[1.2rem] bg-gradient-to-l from-transparent to-lime-300 opacity-90"></span>
         </span>

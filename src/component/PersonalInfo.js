@@ -4,6 +4,9 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { FaArrowAltCircleDown } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { MdPermContactCalendar } from "react-icons/md";
+import { HiFolderOpen } from "react-icons/hi";
 
 const Baner = () => {
   const variant = {
@@ -82,27 +85,47 @@ const Baner = () => {
             <span className="flex flex-col w-5 h-auto">
               <span className="w-3 bg-white h-3 rounded-full"></span>
               <span className="w-1 h-full bg-gradient-to-t from-transparent to-white opacity-90 -mt-2 ml-1"></span>
-
             </span>
             <p
               className="text-gray-200 font-[400] text-start space md:text-md text-sm "
               onMouseEnter={() => setStat("info", "Objective and Experience")}
             >
-              Experienced front-end developer with specialization in <b>React JS</b>,
-              adept at crafting diverse projects utilizing <b>HTML, CSS,</b> and 
+              Experienced front-end developer with specialization in{" "}
+              <b>React JS</b>, adept at crafting diverse projects utilizing{" "}
+              <b>HTML, CSS,</b> and
               <b> JavaScript</b>. Proficient in a range of frontend frameworks,
-              including <b>Tailwind CSS</b> and <b>SCSS/SASS</b>. Demonstrates a comprehensive
-              grasp of <b>Git</b> commands and <b>GitHub</b> workflows.
+              including <b>Tailwind CSS</b> and <b>SCSS/SASS</b>. Demonstrates a
+              comprehensive grasp of <b>Git</b> commands and <b>GitHub</b>{" "}
+              workflows.
             </p>
           </span>
         </motion.div>
+        <span className="flex flex-row gap-10 mx-auto ">
+          <Link
+            className="flex flex-row gap-1 text-md border border-lime-300 p-2 px-4 rounded-md text-lime-300 font-[700] mx-auto my-4 hover:text-black hover:bg-amber-300 hover:border-amber-300"
+            to={"/project"}
+            onClick={() => setStat("project", "List of projects")}
+          >
+            <HiFolderOpen className="mt-1" />
+            project
+          </Link>
+
+          <Link
+            className="flex flex-row gap-1 text-md border border-lime-300 p-2 px-4 rounded-md text-lime-300 font-[700] mx-auto my-4 hover:text-black hover:bg-amber-300 hover:border-amber-300"
+            to={"/contact"}
+            onClick={() => setStat("contact", "Send inquires")}
+          >
+            <MdPermContactCalendar className="mt-1" />
+            contact
+          </Link>
+        </span>
 
         <button
-          className="mt-10 border border-2 rounded-full p-4 text-center bg-none text-white w-[10rem] mx-auto space font-[700] flex flex-row justify-center content-center gap-3 hover:bg-amber-300 hover:border-zinc-900 hover:text-black transition-all ease-linear duration-400 "
+          className="mt-10 border border-2 rounded-full p-4 text-center bg-none text-white w-[10rem] mx-auto space font-[700] flex flex-row justify-center content-center gap-3 hover:bg-amber-300 hover:border-zinc-900 hover:text-black transition-all ease-linear duration-400 animate-bounce"
           onClick={scrollToElement}
         >
-          <p className="animate-bounce">skills</p>
-          <FaArrowAltCircleDown className="animate-bounce mt-0.5" />
+          <p className="">skills</p>
+          <FaArrowAltCircleDown className="mt-0.5" />
         </button>
       </span>
     </>
