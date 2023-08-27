@@ -71,7 +71,7 @@ const Baner = () => {
         >
           <span className="w-auto text-center">
             {letters.map((letter) => (
-              <p className="mt-5 text-white font-[800] text-[3.5rem] md:text-[4rem] leading-[2.8rem] md:leading-[4rem] hover:text-lime-400 md:text-[4.6rem] hover:text-[4.4rem] md:hover:text-[5.2rem] letter transition-all ease-linear duration-400 hover:animate-bounce inline 'use strict'capitalized mx-[0.1rem] hover:skew-y-12 transform">
+              <p className="mt-5 text-white font-[800] text-[3.5rem] md:text-[4rem] leading-[2.8rem] md:leading-[4rem] hover:text-lime-400 md:text-[4.6rem] hover:text-[4.4rem] md:hover:text-[5.2rem] letter transition-all ease-linear duration-400 hover:animate-bounce inline capitalized mx-[0.1rem] hover:skew-y-12 transform">
                 {letter}
               </p>
             ))}
@@ -117,7 +117,7 @@ const Baner = () => {
         </span>
 
         <button
-          className="mt border border-2 rounded-full p-4 px-6 text-center bg-none text-white mx-auto space font-[700] flex flex-row justify-center content-center gap-1 hover:bg-amber-300 hover:border-zinc-900 hover:text-black transition-all ease-linear duration-400 animate-bunce"
+          className="mt-10 border border-2 rounded-full p-4 px-6 text-center bg-none text-white mx-auto space font-[700] flex flex-row justify-center content-center gap-1 hover:bg-amber-300 hover:border-zinc-900 hover:text-black transition-all ease-linear duration-400 animate-bounce"
           onClick={scrollToElement}
         >
           <RiHomeFill className="mt-1 rotate-[180deg]" />
