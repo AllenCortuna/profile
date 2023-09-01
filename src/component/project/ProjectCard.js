@@ -30,21 +30,25 @@ const ProjectCard = ({ image, title, desc, git, link }) => {
           <span className="pt-8 flex justify-start px-2 gap-4 ">
             {/* github */}
             <a
-              className="border rounded-lg border-white p-2 hover:bg-amber-400 text-white hover:text-zinc-700 hover:border-amber-400 hover:shadow-lg"
+              className="border rounded-lg border-white p-2 hover:bg-amber-400 text-white hover:text-zinc-700 hover:border-amber-400 hover:shadow-lg transition-all duration-300 ease-linear"
               href={git}
+              target="_blank"
+              rel="noreferrer"
             >
               <BsGithub className="w-4 h-auto" />
             </a>
             {/* link  */}
             <a
-              className="border rounded-lg border-white p-2 hover:bg-amber-400 text-white hover:text-zinc-700 hover:border-amber-400 hover:shadow-lg"
+              className="border rounded-lg border-white p-2 hover:bg-amber-400 text-white hover:text-zinc-700 hover:border-amber-400 hover:shadow-lg transition-all duration-300 ease-linear"
               href={link}
+              target="_blank"
+              rel="noreferrer"
             >
               <FaLink className="w-4 h-auto" />
             </a>
-            <span className="rounded-lg border-white p-2 hover:bg-amber-400 text-white hover:text-zinc-700 hover:border-amber-400 hover:shadow-lg ml-auto">
+            <button className="rounded-lg border-white p-2 hover:bg-amber-400 text-white hover:text-zinc-700 hover:border-amber-400 hover:shadow-lg ml-auto transition-all duration-300 ease-linear">
               <FaInfoCircle className="w-4 h-auto drop-shadow-lg" />
-            </span>
+            </button>
           </span>
         </div>
 
@@ -54,9 +58,9 @@ const ProjectCard = ({ image, title, desc, git, link }) => {
           <p className="text-white text-xs font-[500] text-zinc-300 mt-2 space ">
             {desc}
           </p>
-          <span className="space p-3 py-2 rounded-xl text-white text-center hover:font-[900] hover:text-amber-400 place-self-end mt-auto mb-0 underline ">
+          <button className="space p-3 py-2 rounded-xl text-white text-center hover:font-[900] hover:text-amber-400 place-self-end mt-auto mb-0 underline transition-all duration-300 ease-linear">
             back
-          </span>
+          </button>
         </div>
       </div>
     </div>

@@ -61,7 +61,7 @@ const Baner = () => {
 
   return (
     <>
-      <span className="flex flex-col justify-center content-top gap-5 mt-20 md:mt-40">
+      <span className="flex flex-col justify-center content-top gap-5 mt-20 ">
         <motion.div
           ref={ref}
           variants={variant}
@@ -117,7 +117,7 @@ const Baner = () => {
         </span>
 
         <button
-          className="mt-10 border border-2 rounded-full p-4 px-6 text-center bg-none text-white mx-auto space font-[700] flex flex-row justify-center content-center gap-1 hover:bg-amber-300 hover:border-zinc-900 hover:text-black transition-all ease-linear duration-400 animate-bounce"
+          className="mt-5 border border-2 rounded-full p-4 px-6 text-center bg-none text-white mx-auto space font-[700] flex flex-row justify-center content-center gap-1 hover:bg-amber-300 hover:border-zinc-900 hover:text-black transition-all ease-linear duration-400 animate-bounce"
           onClick={scrollToElement}
         >
           <RiHomeFill className="mt-1 rotate-[180deg]" />
