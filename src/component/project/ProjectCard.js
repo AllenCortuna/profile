@@ -34,6 +34,7 @@ const ProjectCard = ({ image, title, desc, git, link }) => {
               href={git}
               target="_blank"
               rel="noreferrer"
+              title="open github project source code"
             >
               <BsGithub className="w-4 h-auto" />
             </a>
@@ -43,10 +44,14 @@ const ProjectCard = ({ image, title, desc, git, link }) => {
               href={link}
               target="_blank"
               rel="noreferrer"
+              title="open site"
             >
               <FaLink className="w-4 h-auto" />
             </a>
-            <button className="rounded-lg border-white p-2 hover:bg-amber-400 text-white hover:text-zinc-700 hover:border-amber-400 hover:shadow-lg ml-auto transition-all duration-300 ease-linear">
+            <button
+              className="rounded-lg border-white p-2 hover:bg-amber-400 text-white hover:text-zinc-700 hover:border-amber-400 hover:shadow-lg ml-auto transition-all duration-300 ease-linear"
+              title="more info"
+            >
               <FaInfoCircle className="w-4 h-auto drop-shadow-lg" />
             </button>
           </span>
