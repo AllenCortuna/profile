@@ -8,7 +8,7 @@ import {
  SiPython,
  // SiCodio,
  SiMui,
- SiNotion
+ SiPhp
 } from "react-icons/si";
 
 const Skills = () => {
@@ -53,10 +53,10 @@ const Skills = () => {
    {/* /> */}
    
    <Motion
-    text={"Notion"}
+    text={"PHP"}
     isLeft={true}
-    color={"hover:border-lime-100 hover:text-lime-100"}
-    image={<SiNotion />}
+    color={"hover:border-violet-400 hover:text-violet-400"}
+    image={<SiPhp />}
    />
 
    <Motion

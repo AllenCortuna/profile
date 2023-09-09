@@ -83,7 +83,7 @@ const Baner = () => {
               <span className="w-1 h-full bg-gradient-to-t from-transparent to-white opacity-90 -mt-2 ml-1"></span>
             </span>
             <p
-              className="text-gray-200 font-[400] text-start space md:text-md sm:text-sm "
+              className="text-gray-200 font-[400] text-start space sm:text-md text-sm "
               onMouseEnter={() => setStat("info", "Objective and Experience")}
             >
               Experienced front-end developer with specialization in{" "}
