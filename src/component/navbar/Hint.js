@@ -11,7 +11,7 @@ const Hint = () => {
   const hint = useHint((state) => state.hint);
 
   const text = hint;
-  const speed = 50;
+  const speed = 40;
   let i = 0;
 
   // function that display hint
@@ -49,7 +49,7 @@ const Hint = () => {
         {stat === "info" && <FaInfoCircle />}
       </span>
       <p
-        className="text-white my-auto text-xs font-[400] space"
+        className="text-white my-auto text-xs sm:text-sm font-[800] space"
         id="typewriter"
       ></p>
     </Link>

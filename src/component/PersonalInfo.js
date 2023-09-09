@@ -76,7 +76,7 @@ const Baner = () => {
               </p>
             ))}
           </span>
-          <span className="flex flex-row mt-3 md:w-[22rem] w-[16rem] justify-center h-auto mx-auto md:pt-10 gap-4">
+          <span className="flex flex-row mt-3 md:w-[22rem] w-[16rem] justify-center h-auto mx-auto sm:pt-10 gap-4">
             {/* line fade art */}
             <span className="flex flex-col w-5 h-auto">
               <span className="w-3 bg-white h-3 rounded-full"></span>

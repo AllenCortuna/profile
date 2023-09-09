@@ -53,11 +53,13 @@ const Contact = () => {
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="p-4 flex flex-col rounded-lg w-full max-w-[26rem] border border-zinc-500 bg-zinc-800 bg-opacity-30 "
+        className="p-4 flex flex-col rounded-2xl w-full max-w-[26rem] border border-zinc-500 bg-zinc-800 bg-opacity-30 "
       >
-        <span className="font-[800] text-xl text-lime-300 mb-5 w-full flex flex-col">
+        <span className="font-[800] text-lime-300 mb-5 w-full flex flex-col">
+          <p className="text-xl sm:text-3xl">
           Contact
-          <p className="text-zinc-300 font-[300] text-xs">
+          </p>
+          <p className="text-zinc-300 font-[300] text-sm sm:text-md">
             Send your contact info and inquires
           </p>
           <span className="h-[0.2rem] w-full mt-[1.2rem] bg-gradient-to-l from-transparent to-lime-300 opacity-90"></span>

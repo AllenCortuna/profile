@@ -2,7 +2,7 @@ import React from "react";
 import autoAnimate from "@formkit/auto-animate";
 import Hint from "./Hint";
 import useHint from "../state/hint";
-import { Link,useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const setStat = useHint((state) => state.setStat);
@@ -12,17 +12,26 @@ const Navbar = () => {
   // current page name
   const location = useLocation();
   const currentPage = location.pathname;
- 
 
   React.useEffect(() => {
     dom.current && autoAnimate(dom.current);
   }, [dom]);
-  
+
   const isSmallScreen = window.innerWidth <= 440;
   const content = [
-    { name: "home", to: "", desc: "Welcome ",pageName: "/" },
-    { name: "project", to: "project", desc: "List of Project", pageName: "/project" },
-    { name: "contact", to: "contact", desc: "Contact Me ", pageName: "/contact" },
+    { name: "home", to: "", desc: "Welcome ", pageName: "/" },
+    {
+      name: "project",
+      to: "project",
+      desc: "List of Project",
+      pageName: "/project",
+    },
+    {
+      name: "contact",
+      to: "contact",
+      desc: "Contact Me ",
+      pageName: "/contact",
+    },
   ];
 
   const handleClick = (stat, hint) => {
@@ -35,7 +44,7 @@ const Navbar = () => {
     "text-zinc-300 text-sm font-semibold hover:text-zinc-100 font-normal hover:font-[900] transition-all ease-linear lowercase hover:uppercase duration-300";
   const activeNavlink =
     "text-lime-400 text-sm font-[900] transition-all ease-linear uppercase underline";
-  
+
   // content for the navbar
   const nav = (
     <nav
@@ -48,7 +57,9 @@ const Navbar = () => {
           className="flex justify-center content-center w-full md:w-20"
           onClick={() => handleClick(a.name, a.desc)}
         >
-          <p className={currentPage === (a.pageName) ?activeNavlink :navlink}>{a.name}</p>
+          <p className={currentPage === a.pageName ? activeNavlink : navlink}>
+            {a.name}
+          </p>
         </Link>
       ))}
     </nav>
@@ -56,7 +67,7 @@ const Navbar = () => {
 
   // WARN: Small Screen toggle menu
   const toggleCls =
-    "w-5 bg-zinc-200 transition-all duration-300 ease-linear h-1 rounded-md ";
+    "w-5 bg-zinc-200 transition-all duration-300 ease-linear h-1 rounded-sm ";
   const smallScreen = (
     <>
       <div className="">
@@ -64,14 +75,14 @@ const Navbar = () => {
           <Hint />
           <span
             onClick={() => setShowNav(!showNav)}
-            className="h-5 w-5 flex flex-wrap align-center justify-center "
+            className="h-5 w-5 flex flex-wrap align-center justify-center -mb-2 "
           >
             <span
-              className={`${toggleCls}${showNav && "h-5 border bg-zinc-800 rotate-45 bg-transparent "
+            className={`${toggleCls}${showNav && "h-5 border rotate-45 bg-zinc-200 "
                 }`}
             ></span>
             <span
-              className={`${toggleCls}${showNav && "h-5 border -mt-3 rotate-45 bg-zinc-200 "
+             className={`${toggleCls}${showNav && "h-5 -mt-3 rotate-45 bg-zinc-900 "
                 }`}
             ></span>
           </span>
@@ -90,7 +101,10 @@ const Navbar = () => {
   );
 
   return (
-    <div className=" bg-zinc-800 grid w-screen h-auto fixed top-0 z-50 shadow-lg " ref={dom}>
+    <div
+      className=" bg-zinc-900 grid w-screen h-auto fixed top-0 z-50 shadow-lg border-b border-zinc-700 "
+      ref={dom}
+    >
       {isSmallScreen ? smallScreen : otherScreen}
     </div>
   );
