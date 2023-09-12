@@ -46,7 +46,7 @@ const Contact = () => {
 
   const label = "text-white text-lg font-[600] mt-5 mb-2 space";
   const input =
-    "rounded-lg p-2 text-sm bg-zinc-700 outline-none border-2 border-zinc-700 focus:border-lime-300 text-zinc-200 font-[500] text-sm quick ";
+    "rounded-lg p-2 text-sm bg-zinc-700 outline-none border-2 border-zinc-700 focus:border-lime-300 text-zinc-200 font-[500] text-sm quick resize-none";
   return (
     <span className="mt-36 mb-20 flex justify-center w-full px-4">
       <ToastContainer/>

@@ -1,14 +1,12 @@
 import Motion from "./motion/Motion";
 import { FaCss3Alt, FaGitAlt } from "react-icons/fa";
-import { TbBrandJavascript } from "react-icons/tb";
+import { TbBrandJavascript,TbBrandLaravel } from "react-icons/tb";
 import { RiReactjsLine} from "react-icons/ri";
 import {
  SiSass,
  SiTailwindcss,
  SiPython,
- // SiCodio,
- SiMui,
- SiPhp
+ SiLaragon,
 } from "react-icons/si";
 
 const Skills = () => {
@@ -45,18 +43,11 @@ const Skills = () => {
     image={<SiPython />}
    />
 
-   {/* <Motion */}
-   {/*  text={"CProgramming"} */}
-   {/*  isLeft={false} */}
-   {/*  color={"hover:border-indigo-400 hover:text-indigo-400"} */}
-   {/*  image={<SiCodio />} */}
-   {/* /> */}
-   
    <Motion
-    text={"PHP"}
+    text={"Laravel"}
     isLeft={true}
-    color={"hover:border-violet-400 hover:text-violet-400"}
-    image={<SiPhp />}
+    color={"hover:border-red-500 hover:text-red-500"}
+    image={< TbBrandLaravel/>}
    />
 
    <Motion
@@ -81,11 +72,12 @@ const Skills = () => {
    />
 
    <Motion
-    text={"MaterialUI"}
+    text={"PHP"}
     isLeft={true}
-    color={"hover:border-blue-500 hover:text-blue-500"}
-    image={<SiMui />}
+    color={"hover:border-violet-400 hover:text-violet-400"}
+    image={<SiLaragon />}
    />
+
   </div>
  );
 };
