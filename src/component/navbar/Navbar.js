@@ -48,7 +48,7 @@ const Navbar = () => {
   // content for the navbar
   const nav = (
     <nav
-      className={` my-auto grid gap-2 h-0 p-4 h-full ${!isSmallScreen && "grid-cols-4 p-5 py-1"
+      className={` my-auto grid gap-2 h-0 p-4 h-full ${!isSmallScreen && "grid-cols-3 py-1"
         }`}
     >
       {content.map((a) => (
@@ -93,11 +93,9 @@ const Navbar = () => {
   );
 
   const otherScreen = (
-    <div>
-      <span className="flex flex-wrap justify-between px-3 py-2">
+      <span className="flex flex-wrap justify-between px-8 py-2">
         <Hint /> {nav}
       </span>
-    </div>
   );
 
   return (

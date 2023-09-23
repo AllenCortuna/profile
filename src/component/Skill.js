@@ -13,7 +13,7 @@ import {
 const Skills = () => {
  return (
   <div
-   className="grid grid-cols-2 md:grid-cols-4 justify-center content-start flex-col gap-14 gap-y-20 p-2 mt-28 pt-20 overflow-hidden"
+   className="grid grid-cols-2 md:grid-cols-4 mx-auto justify-content-start flex-col gap-14 gap-y-20 mt-28 py-20 overflow-hidden px-5"
    id="f-skill"
   >
    <Motion
