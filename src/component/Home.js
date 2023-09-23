@@ -26,7 +26,7 @@ const Home = () => {
           onClick={scrollToTop}
         >
           <RiHomeFill className="mt-1"/>
-          <p className="">
+          <p className="mr-2">
           back</p>
         </button>
       </div>

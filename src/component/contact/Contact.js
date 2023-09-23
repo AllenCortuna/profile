@@ -1,9 +1,28 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { successToast,errorToast,warnToast } from "../../utility/toast";
 import { ToastContainer } from "react-toastify";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Contact = () => {
+  
+  const zoomAnimate = {
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+    hidden: { opacity: 1, scale: 0,  },
+  };
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+  
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
+  
   const form = useRef();
   const [data, setData] = useState({
     name: " ",
@@ -48,7 +67,13 @@ const Contact = () => {
   const input =
     "rounded-lg p-2 text-sm bg-zinc-700 outline-none border-2 border-zinc-700 focus:border-lime-300 text-zinc-200 font-[500] text-sm quick resize-none";
   return (
-    <span className="mt-36 mb-20 flex justify-center w-full px-4">
+    <motion.div
+      ref={ref}
+      variants={zoomAnimate}
+      initial="hidden"
+      animate={control}
+      className="mt-36 mb-20 flex justify-center w-full px-4"
+    >
       <ToastContainer/>
       <form
         ref={form}
@@ -99,7 +124,7 @@ const Contact = () => {
           className="text-md border border-lime-300 p-2 px-6 rounded-full text-lime-300 font-[700] mx-auto my-4 hover:text-black hover:bg-amber-300 hover:border-amber-300"
         />
       </form>
-    </span>
+    </motion.div>
   );
 };
 

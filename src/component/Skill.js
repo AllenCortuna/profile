@@ -1,7 +1,8 @@
 import Motion from "./motion/Motion";
 import { FaCss3Alt, FaGitAlt } from "react-icons/fa";
-import { TbBrandJavascript,TbBrandLaravel } from "react-icons/tb";
+import { TbBrandJavascript,TbBrandLaravel, TbBrandMysql, TbBrandNextjs } from "react-icons/tb";
 import { RiReactjsLine} from "react-icons/ri";
+import { DiMongodb} from "react-icons/di";
 import {
  SiSass,
  SiTailwindcss,
@@ -12,7 +13,7 @@ import {
 const Skills = () => {
  return (
   <div
-   className="grid grid-cols-1 md:grid-cols-3 justify-center content-start flex-col gap-20 p-4 mt-28 pt-20"
+   className="grid grid-cols-2 md:grid-cols-4 justify-center content-start flex-col gap-14 gap-y-20 p-2 mt-28 pt-20 overflow-hidden"
    id="f-skill"
   >
    <Motion
@@ -77,6 +78,28 @@ const Skills = () => {
     color={"hover:border-violet-400 hover:text-violet-400"}
     image={<SiLaragon />}
    />
+   
+   <Motion
+    text={"MongoDB"}
+    isLeft={false}
+    color={"hover:border-lime-500 hover:text-lime-500"}
+    image={<DiMongodb />}
+   />
+
+   <Motion
+    text={"NextJS"}
+    isLeft={true}
+    color={"hover:border-teal-400 hover:text-teal-400"}
+    image={<TbBrandNextjs />}
+   />
+   
+   <Motion
+    text={"MySQL"}
+    isLeft={false}
+    color={"hover:border-blue-400 hover:text-blue-400"}
+    image={<TbBrandMysql />}
+   />
+   
 
   </div>
  );

@@ -15,7 +15,7 @@ const Project = () => {
       </span>
 
       {/* list of project */}
-      <span className="flex flex-wrap flex-row mt-20 justify-center gap-16">
+      <span className="flex flex-wrap flex-row mt-20 justify-center gap-16 ">
         <ProjectCard
           image={roomhunt}
           title={"Roomhunt"}

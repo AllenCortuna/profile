@@ -26,7 +26,7 @@ const Motion = ({ text, isLeft, image, color }) => {
   const setStat = useHint((state) => state.setStat);
   // glassmorphism
   // bg-opacity-20 backdrop-blur-lg
-  const cls = `transition-all ease-linear duration-300 h-[8rem] w-[10rem] flex flex-col text-[1rem] text-white border hover:border-4 border-zinc-300 bg-zinc-900 rounded-lg font-bold z-0 drop-shadow-md ${color}`;
+  const cls = `transition-all ease-linear duration-300 h-[6rem] w-[8rem] flex flex-col text-[1rem] text-white hover:border-4 border-zinc-300 bg-zinc-900 rounded-lg font-bold z-0 drop-shadow-md ${color}`;
   
   return (
     <div className="hover:rotate-[360deg] transition-all ease-linear duration-300 ">
@@ -38,9 +38,9 @@ const Motion = ({ text, isLeft, image, color }) => {
       className={cls}
       onClick={() => setStat("info", text)}
     >
-      <span className="text-[3rem] m-auto">{image}</span>
+      <span className="text-[2rem] m-auto">{image}</span>
 
-      <p className="text-center m-auto space ">{text}</p>
+      <p className="text-sm text-center m-auto space ">{text}</p>
     </motion.div>
     </div>
   );
