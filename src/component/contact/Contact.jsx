@@ -1,19 +1,31 @@
 import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { successToast,errorToast,warnToast } from "../../utility/toast";
+import { successToast, errorToast, warnToast } from "../../utility/toast";
 import { ToastContainer } from "react-toastify";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import email_animate from "../img/email.json";
+import Lottie from "react-lottie";
 
 const Contact = () => {
-  
+  // Lottie
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: email_animate,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
+  // framer motion animation
   const zoomAnimate = {
     visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-    hidden: { opacity: 1, scale: 0,  },
+    hidden: { opacity: 1, scale: 0 },
   };
   const control = useAnimation();
   const [ref, inView] = useInView();
-  
+
   useEffect(() => {
     if (inView) {
       control.start("visible");
@@ -22,7 +34,6 @@ const Contact = () => {
     }
   }, [control, inView]);
 
-  
   const form = useRef();
   const [data, setData] = useState({
     name: " ",
@@ -53,7 +64,7 @@ const Contact = () => {
           },
           (error) => {
             console.log(error.text);
-            errorToast(error.text)
+            errorToast(error.text);
           },
         );
     }
@@ -63,7 +74,7 @@ const Contact = () => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
-  const label = "text-white text-lg font-[600] mt-5 mb-2 space";
+  const label = "text-white text-md font-[600] mt-4 mb-2 ml-2 space";
   const input =
     "rounded-lg p-2 text-sm bg-zinc-700 outline-none border-2 border-zinc-700 focus:border-lime-300 text-zinc-200 font-[500] text-sm quick resize-none";
   return (
@@ -72,22 +83,23 @@ const Contact = () => {
       variants={zoomAnimate}
       initial="hidden"
       animate={control}
-      className="mt-36 mb-20 flex justify-center w-full px-4"
+      className="mt-28 mb-20 flex justify-center w-full px-4 flex-wrap"
     >
-      <ToastContainer/>
+      <ToastContainer />
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="p-4 flex flex-col rounded-2xl w-full max-w-[26rem] border border-zinc-500 bg-zinc-800 bg-opacity-30 "
+        className="p-4 flex flex-col rounded-2xl w-full max-w-[26rem] border border-zinc-800 bg-zinc-800 bg-opacity-30 drop-shadow-md "
       >
-        <span className="font-[800] text-lime-300 mb-5 w-full flex flex-col">
-          <p className="text-xl sm:text-3xl">
-          Contact
-          </p>
-          <p className="text-zinc-300 font-[300] text-sm sm:text-md">
-            Send your contact info and inquires
-          </p>
-          <span className="h-[0.2rem] w-full mt-[1.2rem] bg-gradient-to-l from-transparent to-lime-300 opacity-90"></span>
+        <span className=" flex flex-row justify-start w-full">
+          <Lottie options={defaultOptions} height={100} width={200} />
+          <span className="font-[800] text-lime-300 w-full flex flex-col">
+            <p className="text-xl sm:text-3xl">Contact</p>
+            <p className="text-zinc-300 font-[300] text-sm sm:text-md">
+              Send your contact info and inquires
+            </p>
+            <span className="h-[0.2rem] w-full mt-[1.2rem] bg-gradient-to-l from-transparent to-zinc-200 opacity-90"></span>
+          </span>
         </span>
         <label className={label}>Name</label>
         <input
@@ -115,13 +127,13 @@ const Contact = () => {
         // onChange={(e) => handleChange(e)}
         />
 
-        <span className="h-[0.2rem] w-full mt-[1.2rem] bg-gradient-to-l from-transparent to-lime-300 opacity-90"></span>
+        <span className="h-[0.2rem] w-full mt-[1.2rem] bg-gradient-to-l from-transparent to-zinc-100 opacity-90"></span>
 
         <input
           type="submit"
           value="Send"
           disabled={loading}
-          className="text-md border border-lime-300 p-2 px-6 rounded-full text-lime-300 font-[700] mx-auto my-4 hover:text-black hover:bg-amber-300 hover:border-amber-300"
+          className="text-md border border-lime-300 p-2 px-8 rounded-full text-lime-300 font-[700] mx-auto my-4 hover:text-black hover:bg-amber-300 hover:border-amber-300"
         />
       </form>
     </motion.div>

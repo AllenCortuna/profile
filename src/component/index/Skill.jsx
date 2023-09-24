@@ -1,4 +1,4 @@
-import Motion from "./motion/Motion";
+import Motion from "./Motion";
 import { FaCss3Alt, FaGitAlt } from "react-icons/fa";
 import { TbBrandJavascript,TbBrandLaravel, TbBrandMysql, TbBrandNextjs } from "react-icons/tb";
 import { RiReactjsLine} from "react-icons/ri";

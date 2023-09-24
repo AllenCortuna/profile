@@ -95,7 +95,7 @@ const ProjectCard = ({ image, title, desc, git, link }) => {
         {/* Back content */}
         <div className="card-back rounded-lg border border-zinc-100 flex flex-col p-3 justify-start">
           <h1 className="text-white text-lg font-[800] space ">{title}</h1>
-          <p className="text-white text-sm font-[500] text-zinc-300 mt-2 quick ">
+          <p className="text-white text-sm font-[500] text-zinc-300 mt-2 space ">
             {desc}
           </p>
           <button className="space p-3 py-2 rounded-xl text-white text-center hover:font-[900] hover:text-amber-400 place-self-end mt-auto mb-0 underline transition-all duration-300 ease-linear">
