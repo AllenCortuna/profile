@@ -4,6 +4,7 @@ import Intro  from './Intro'
 import Skills from "./Skill";
 import useHint from "../state/hint";
 import { RiHomeFill } from "react-icons/ri";
+import Educ from "./Educ";
 
 const Home = () => {
 
@@ -22,6 +23,7 @@ const Home = () => {
         <Profile/>
         <Intro/>
         <Skills/>
+        <Educ/>
         <button
           className=" border rounded-md p-3 px-5 text-center bg-none text-white mx-auto space font-[700] text-sm flex flex-row justify-center content-center gap-1 hover:bg-amber-300 hover:border-amber-300 hover:text-black transition-all ease-linear duration-300"
           

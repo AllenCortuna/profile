@@ -59,7 +59,7 @@ const Baner = () => {
         >
             <span className="text-center my-auto ">
               {letters.map((letter) => (
-                <p className="mt-5 text-white font-[800] text-[3.5rem] md:text-[4rem] leading-[2.8rem] md:leading-[4rem] hover:text-lime-400 md:text-[4.6rem] hover:text-[4.4rem] md:hover:text-[5.2rem] letter transition-all ease-linear duration-400 hover:animate-bounce inline capitalized mx-[0.1rem] hover:skew-y-12 transform">
+                <p className="mt-5 text-white font-[800] text-[3.5rem] md:text-[4rem] leading-[3rem] md:leading-[4rem] hover:text-lime-400 md:text-[4.6rem] hover:text-[4.4rem] md:hover:text-[5.2rem] letter transition-all ease-linear duration-400 hover:animate-bounce inline capitalized mx-[0.1rem] hover:skew-y-12 transform">
                   {letter}
                 </p>
               ))}
@@ -80,7 +80,7 @@ const Baner = () => {
               <b> HTML, CSS,</b> and
               <b> JavaScript</b>. Proficient in a range of frontend frameworks,
               including <b>Tailwind CSS</b> and <b>SCSS/SASS</b>. Demonstrates a
-              comprehensive grasp of <b>Git</b> commands and <b>GitHub</b>
+              comprehensive grasp of <b>Git</b> commands and <b>GitHub </b>
               workflows.
             </p>
           </span>

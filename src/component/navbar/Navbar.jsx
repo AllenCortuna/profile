@@ -41,7 +41,7 @@ const Navbar = () => {
   // styling for the navbar items
   // WARN: navlink is in index.css
   const navlink =
-    "text-zinc-300 text-sm font-semibold hover:text-zinc-100 font-normal hover:font-[900] transition-all ease-linear lowercase hover:uppercase duration-300";
+    "text-zinc-400 text-sm font-semibold hover:text-zinc-100 font-normal hover:font-[900] transition-all ease-linear lowercase hover:uppercase duration-300";
   const activeNavlink =
     "text-lime-400 text-sm font-[900] transition-all ease-linear uppercase underline";
 
