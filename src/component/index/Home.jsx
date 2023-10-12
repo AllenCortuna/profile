@@ -20,8 +20,10 @@ const Home = () => {
   return (
     <div className="">
       <div className="my-10 grid grid-cols-1 justify-items-center gap-5">
+        <span className="flex flex-col justify-items-center md:min-h-screen">
         <Profile/>
         <Intro/>
+        </span>
         <Skills/>
         <Educ/>
         <button

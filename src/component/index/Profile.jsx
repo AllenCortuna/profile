@@ -60,20 +60,20 @@ const Baner = () => {
         >
           <span className="text-center my-auto ">
             {letters.map((letter) => (
-              <p className="mt-5 text-white font-[800] text-[3.5rem] md:text-[4rem] leading-[3rem] md:leading-[4rem] hover:text-lime-400 md:text-[4.6rem] hover:text-[4.4rem] md:hover:text-[5.2rem] letter transition-all ease-linear duration-400 hover:animate-bounce inline capitalized mx-[0.1rem] hover:skew-y-12 transform">
+              <p className="mt-5 text-white font-[800] text-[3.5rem] md:text-[4rem] lg:text-[6rem] leading-[3rem] md:leading-[4rem] hover:text-lime-400 md:text-[4.6rem] hover:text-[4.4rem] md:hover:text-[5.2rem] lg:hover:text-[6.2rem] letter transition-all ease-linear duration-400 hover:animate-bounce inline capitalized mx-[0.1rem] hover:skew-y-12 transform">
                 {letter}
               </p>
             ))}
           </span>
           <span className="w-auto flex flex-row gap-5 mt-5">
-            <span className="flex flex-row md:w-[22rem] w-[16rem] justify-center h-auto mx-auto gap-4">
+            <span className="flex flex-row md:w-[26rem] w-[15rem] justify-center h-auto mx-auto gap-4">
               {/* line fade art */}
               <span className="flex flex-col w-5 h-auto">
                 <span className="w-3 bg-white h-3 rounded-full"></span>
                 <span className="w-1 h-full bg-gradient-to-t from-transparent to-white opacity-90 -mt-2 ml-1"></span>
               </span>
               <p
-                className="text-gray-200 font-[400] text-start space sm:text-md text-sm "
+                className="text-gray-200 font-[400] text-justify space text-sm md:text-md lg:text-lg "
                 onMouseEnter={() => setStat("info", "Objective and Experience")}
               >
                 Experienced full stack developer with specialization in

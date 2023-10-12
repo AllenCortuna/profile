@@ -17,9 +17,9 @@ const Intro = () => {
   };
   return (
     <div>
-      <span className="flex flex-row gap-10 mx-auto ">
+      <span className="flex flex-row gap-10 mx-auto justify-center md:mt-10 ">
         <Link
-          className="flex flex-row gap-1 text-md border border-lime-300 p-2 px-4 rounded-md text-lime-300 font-[700] mx-auto my-4 hover:text-black hover:bg-amber-300 hover:border-amber-300"
+          className="flex flex-row gap-1 text-md border border-lime-300 p-2 px-4 rounded-md text-lime-300 font-[700] my-4 hover:text-black hover:bg-amber-300 hover:border-amber-300"
           to={"/project"}
           onClick={() => setStat("project", "List of projects")}
         >
@@ -28,7 +28,7 @@ const Intro = () => {
         </Link>
 
         <Link
-          className="flex flex-row gap-1 text-md border border-lime-300 p-2 px-4 rounded-md text-lime-300 font-[700] mx-auto my-4 hover:text-black hover:bg-amber-300 hover:border-amber-300"
+          className="flex flex-row gap-1 text-md border border-lime-300 p-2 px-4 rounded-md text-lime-300 font-[700] my-4 hover:text-black hover:bg-amber-300 hover:border-amber-300"
           to={"/contact"}
           onClick={() => setStat("contact", "Send inquires")}
         >
