@@ -3,9 +3,21 @@ import useHint from "../state/hint";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-
+import Typed from "typed.js";
 
 const Baner = () => {
+  const el = React.useRef(null);
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ["<i>Experienced full stack developer with specialization in <b> React JS</b>, adept at crafting diverse projects utilizing <b> HTML, CSS,</b> and <b> JavaScript</b>. Proficient in a range of frontend frameworks, including <b>Tailwind CSS</b> and <b>SCSS/SASS</b>. Demonstrates a comprehensive grasp of <b>Git</b> commands and <b>GitHub </b> workflows. </i>"],
+      typeSpeed: 10,
+    });
+    return () => {
+      // Destroy Typed instance during cleanup to stop animation
+      typed.destroy();
+    };
+  }, []);
+
   const variant = {
     visible: {
       opacity: 1,
@@ -73,17 +85,10 @@ const Baner = () => {
                 <span className="w-1 h-full bg-gradient-to-t from-transparent to-white opacity-90 -mt-2 ml-1"></span>
               </span>
               <p
-                className="text-gray-200 font-[400] text-justify space text-sm md:text-md lg:text-lg "
+                className="text-gray-200 font-[400] text-left space text-sm md:text-md lg:text-lg "
                 onMouseEnter={() => setStat("info", "Objective and Experience")}
               >
-                Experienced full stack developer with specialization in
-                <b> React JS</b>, adept at crafting diverse projects utilizing
-                <b> HTML, CSS,</b> and
-                <b> JavaScript</b>. Proficient in a range of frontend
-                frameworks, including <b>Tailwind CSS</b> and <b>SCSS/SASS</b>.
-                Demonstrates a comprehensive grasp of <b>Git</b> commands and{" "}
-                <b>GitHub </b>
-                workflows.
+                <span ref={el} />
               </p>
             </span>
           </span>

@@ -1,36 +1,28 @@
-import React, { useCallback, useEffect } from "react";
+import React, { useEffect } from "react";
 import useHint from "../state/hint";
 import { HiFolderOpen } from "react-icons/hi";
 import { MdPermContactCalendar } from "react-icons/md";
 import { FaInfoCircle } from "react-icons/fa";
 import { BsPersonCircle } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import Typed from "typed.js";
 
 const Hint = () => {
   const stat = useHint((state) => state.stat);
   const hint = useHint((state) => state.hint);
 
-  const text = hint;
-  const speed = 40;
-  let i = 0;
-
+  const el = React.useRef(null);
   // function that display hint
-  const typeWriter = useCallback(() => {
-    if (i < text.length) {
-      document.getElementById("typewriter").innerHTML += text.charAt(i);
-      i++;
-      setTimeout(typeWriter, speed);
-    } else {
-      document.getElementById("typewriter").style.opacity = 1;
-    }
-  }, [i, text]);
-
   useEffect(() => {
-    typeWriter();
+    const typed = new Typed(el.current, {
+      strings: [hint],
+      typeSpeed: 20,
+    });
     return () => {
-      document.getElementById("typewriter").innerHTML = "";
+      // Destroy Typed instance during cleanup to stop animation
+      typed.destroy();
     };
-  }, [stat, hint, typeWriter]);
+  }, [hint]);
 
   const setStat = useHint((state) => state.setStat);
 
@@ -48,10 +40,9 @@ const Hint = () => {
         {stat === "project" && <HiFolderOpen />}
         {stat === "info" && <FaInfoCircle />}
       </span>
-      <p
-        className="text-white my-auto text-xs sm:text-sm font-[800] space"
-        id="typewriter"
-      ></p>
+      <p className="text-white my-auto text-xs sm:text-sm font-[800] space">
+        <span ref={el} />
+      </p>
     </Link>
   );
 };
