@@ -1,38 +1,8 @@
 import React, { useState } from "react";
 import { BsGithub } from "react-icons/bs";
 import { FaInfoCircle, FaLink } from "react-icons/fa";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
 
 const ProjectCard = ({ image, title, desc, git, link }) => {
-  // animation framer motion
-  const variant = {
-    visible: {
-      opacity: 1,
-      scale: 1,
-      x: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
-    hidden: {
-      opacity: 0,
-      scale: 1,
-      x: 100
-    },
-  };
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
-    }
-  }, [control, inView]);
-
   // card flip state
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -41,11 +11,7 @@ const ProjectCard = ({ image, title, desc, git, link }) => {
   };
 
   return (
-    <motion.div
-      ref={ref}
-      variants={variant}
-      initial="hidden"
-      animate={control}
+    <div
       className={`flex card h-[19rem] w-[20rem] ${isFlipped ? "flipped" : ""}`}
       onClick={handleFlip}
     >
@@ -103,7 +69,7 @@ const ProjectCard = ({ image, title, desc, git, link }) => {
           </button>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

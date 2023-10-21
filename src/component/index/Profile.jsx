@@ -9,7 +9,7 @@ const Baner = () => {
   const el = React.useRef(null);
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["<i>Experienced full stack developer with specialization in <b> React JS</b>, adept at crafting diverse projects utilizing <b> HTML, CSS,</b> and <b> JavaScript</b>. Proficient in a range of frontend frameworks, including <b>Tailwind CSS</b> and <b>SCSS/SASS</b>. Demonstrates a comprehensive grasp of <b>Git</b> commands and <b>GitHub </b> workflows. </i>"],
+      strings: ["<i>Full Stack Web Developer with specialization in <b> React JS</b>, adept at crafting diverse projects utilizing <b> HTML, CSS,</b> and <b> JavaScript</b>. Proficient in a range of frontend frameworks, including <b>Tailwind CSS</b> and <b>SCSS/SASS</b>. Demonstrates a comprehensive grasp of <b>Git</b> commands and <b>GitHub </b> workflows. </i>"],
       typeSpeed: 10,
     });
     return () => {
