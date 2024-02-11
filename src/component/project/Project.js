@@ -29,26 +29,7 @@ const Project = () => {
 
       {/* list of project */}
       <span className="flex flex-wrap flex-row mt-10 justify-center gap-16 ">
-        <ProjectCard
-          image={roomhunt}
-          title={"Roomhunt"}
-          link={"https://roomhunt.vercel.app/"}
-          git={"https://github.com/AllenCortuna/roomhunt-client"}
-          desc={
-            "Roomhunt is a Progressive Web Application build using MERN(MongoDb, ExpressJS, React JS, and Node) this project provides feature for Room Seekers and Accommodators like updating available rooms, sending feedback and allows sending and recieving message."
-          }
-        />
-
-        <ProjectCard
-          image={webpos}
-          title={"Web Based Pos"}
-          link={"https://document-tracker-five.vercel.app/"}
-          git={"https://github.com/AllenCortuna/document-tracker"}
-          desc={
-            "A Point of Sale system using the MERN stack. Incorporates various npm libraries such as nodemailer for authentication, Chart.js for data visualization, and Zustand for state management. This system was created to monitor diverse inventory items and automate the calculation of daily, monthly, and quarterly expenses and income."
-          }
-        />
-
+        
         <ProjectCard
           image={githubApi}
           title={"NextJS APP (Github API)"}
@@ -56,6 +37,16 @@ const Project = () => {
           git={"https://github.com/AllenCortuna/document-tracker"}
           desc={
             "Next JS Application that integrates Github API to fetch list of public repository and its information. Dark mode toggle is included and showcase different Next JS features like suspense boundary and caching data."
+          }
+        />
+        
+        <ProjectCard
+          image={roomhunt}
+          title={"Roomhunt"}
+          link={"https://roomhunt.vercel.app/"}
+          git={"https://github.com/AllenCortuna/roomhunt-client"}
+          desc={
+            "Roomhunt is a Progressive Web Application build using MERN(MongoDb, ExpressJS, React JS, and Node) this project provides feature for Room Seekers and Accommodators like updating available rooms, sending feedback and allows sending and recieving message."
           }
         />
       </span>
