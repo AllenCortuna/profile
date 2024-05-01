@@ -1,7 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import roomhunt from "../img/roomhunt.png";
-import webpos from "../img/webpos.png";
 import spaceman from "../img/spaceman.json";
 import githubApi from "../img/githubApi.png";
 import Lottie from "react-lottie";
@@ -39,7 +38,7 @@ const Project = () => {
             "Next JS Application that integrates Github API to fetch list of public repository and its information. Dark mode toggle is included and showcase different Next JS features like suspense boundary and caching data."
           }
         />
-        
+
         <ProjectCard
           image={roomhunt}
           title={"Roomhunt"}
