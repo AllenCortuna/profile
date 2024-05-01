@@ -31,7 +31,7 @@ const ProjectCard = ({ image, title, desc, git, link }) => {
           </p>
           <span className="h-[0.2rem] w-full mx-2 bg-gradient-to-l from-transparent to-lime-600 opacity-90"></span>
 
-          <span className="mb-4 mt-auto flex flex-wrap justify-start px-2 gap-4 ">
+          <span className="mb-4 mt-3 flex flex-wrap justify-start px-2 gap-4 ">
             {/* github */}
             <a
               className={linkStl}
@@ -44,16 +44,19 @@ const ProjectCard = ({ image, title, desc, git, link }) => {
               Github
             </a>
             {/* link  */}
-            <a
-              className={linkStl}
-              href={link}
-              target="_blank"
-              rel="noreferrer"
-              title="open site"
-            >
-              <FaLink className="w-4 h-auto" />
-              Visit
-            </a>
+            {link && (
+              <a
+                className={linkStl}
+                href={link}
+                target="_blank"
+                rel="noreferrer"
+                title="open site"
+              >
+                <FaLink className="w-4 h-auto" />
+                Visit
+              </a>
+            )}
+
             <button className={linkStl} title="more info">
               <FaInfoCircle className="w-4 h-auto drop-shadow-lg" />
               Info

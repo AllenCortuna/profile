@@ -1,6 +1,8 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import roomhunt from "../img/roomhunt.png";
+import chromeExt from "../img/chromeExtension.png";
+import doctemplate from "../img/doctemplater.png";
 import spaceman from "../img/spaceman.json";
 import githubApi from "../img/githubApi.png";
 import Lottie from "react-lottie";
@@ -28,7 +30,6 @@ const Project = () => {
 
       {/* list of project */}
       <span className="flex flex-wrap flex-row mt-10 justify-center gap-16 ">
-        
         <ProjectCard
           image={githubApi}
           title={"NextJS APP (Github API)"}
@@ -46,6 +47,26 @@ const Project = () => {
           git={"https://github.com/AllenCortuna/roomhunt-client"}
           desc={
             "Roomhunt is a Progressive Web Application build using MERN(MongoDb, ExpressJS, React JS, and Node) this project provides feature for Room Seekers and Accommodators like updating available rooms, sending feedback and allows sending and recieving message."
+          }
+        />
+
+        <ProjectCard
+          image={doctemplate}
+          title={"Document Templater"}
+          link={""}
+          git={"https://github.com/AllenCortuna/doctemplater"}
+          desc={
+            "Document Templater is an offline-capable Next.js application. This project leverages xlsx and doctemplater to populate a Microsoft Word document template with data from an xlsx spreadsheet (clone this repo to see the demo)."
+          }
+        />
+
+        <ProjectCard
+          image={chromeExt}
+          title={"Chrome Extension"}
+          link={""}
+          git={"https://github.com/AllenCortuna/DPWH-extension"}
+          desc={
+            "Chrome extension automatically populates input fields based on the submitted document filename. It was developed to streamline workflow by minimizing repetitive typing and decreasing the likelihood of typographical errors."
           }
         />
       </span>
