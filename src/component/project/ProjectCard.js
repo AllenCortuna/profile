@@ -72,7 +72,6 @@ const ProjectCard = ({ image, title, desc, git, link }) => {
           </p>
           <button
             className={`place-self-end mt-auto mb-0 ${linkStl}`}
-            // className={linkStl}
           >
             <FaLocationArrow className="rotate-[220deg] mt-1" />
             back

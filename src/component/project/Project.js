@@ -20,7 +20,6 @@ const Project = () => {
   return (
     <div className="pt-14 pb-20 w-full h-full flex flex-col">
       <span className="flex flex-row gap-1 justify-start w-auto md:mx-[10%] mx-[2%]">
-        {/* <span className="h-[0.2rem] w-[5rem] mt-[1.2rem] bg-gradient-to-r from-transparent to-white opacity-90"></span> */}
         <Lottie options={defaultOptions} height={200} width={200} />
         <span className="flex w-full my-auto flex-col ">
           <p className="text-zinc-100 font-[900] text-xl">Projects</p>
@@ -34,7 +33,7 @@ const Project = () => {
           image={githubApi}
           title={"NextJS APP (Github API)"}
           link={"https://cortuna-repo-list.vercel.app/"}
-          git={"https://github.com/AllenCortuna/document-tracker"}
+          git={"https://github.com/AllenCortuna/Next-JS"}
           desc={
             "Next JS Application that integrates Github API to fetch list of public repository and its information. Dark mode toggle is included and showcase different Next JS features like suspense boundary and caching data."
           }
@@ -53,10 +52,10 @@ const Project = () => {
         <ProjectCard
           image={doctemplate}
           title={"Document Templater"}
-          link={""}
+          link={"https://dpwh-modeo-webapp.vercel.app/"}
           git={"https://github.com/AllenCortuna/doctemplater"}
           desc={
-            "Document Templater is an offline-capable Next.js application. This project leverages xlsx and doctemplater to populate a Microsoft Word document template with data from an xlsx spreadsheet (clone this repo to see the demo)."
+            "Document Templater is a Next.js application that showcase the use of NextResponse from 'next/server'. This project leverages doctemplater to populate a Microsoft Word document template with data from a form input."
           }
         />
 
