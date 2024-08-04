@@ -11,28 +11,26 @@ const ProjectCard = ({ image, title, desc, git, link }) => {
   };
 
   const linkStl =
-    "border rounded-md border-white p-3 pl-4 pr-5 hover:bg-amber-400 text-white hover:text-zinc-700 hover:border-amber-400 hover:shadow-lg transition-all duration-300 ease-linear text-xs space underline flex flex-row gap-2 font-bold ";
+    "rounded-md p-3 pl-4 pr-5 hover:bg-amber-400 text-gray-400 hover:text-zinc-700 hover:border-amber-400 hover:shadow-lg transition-all duration-300 ease-linear text-xs space underline flex flex-row gap-2 font-bold bg-gray-700";
 
   return (
     <div
-      className={`flex card h-[23rem] w-[20rem] ${isFlipped ? "flipped" : ""}`}
+      className={`flex card h-[20rem] w-[20rem] ${isFlipped ? "flipped" : ""}`}
       onClick={handleFlip}
     >
       <div className="card-inner">
         {/* Front content */}
-        <div className="card-front rounded-xl bg-[#313235] flex flex-col justify-start p-2 content-start">
+        <div className="card-front rounded-2xl bg-gray-800 border border-gray-700 flex flex-col justify-start content-start">
           <img
             src={image}
             alt="notfound"
-            className="w-full h-[12rem] object-cover rounded-lg border-white border"
+            className="w-full h-[12rem] object-cover rounded-tl-2xl rounded-tr-2xl"
           />
-          <p className="text-white text-sm space font-[700] mt-2 ml-2 drop-shadow-md ">
+          <p className="text-white space font-[700] mt-2 ml-2 letter drop-shadow-md ">
             {title}
           </p>
-          <span className="h-[0.2rem] w-full mx-2 bg-gradient-to-l from-transparent to-lime-600 opacity-90"></span>
 
-          <span className="mb-4 mt-3 flex flex-wrap justify-start px-2 gap-4 ">
-            {/* github */}
+          <span className="mb-4 mt-3 flex flex-row justify-start px-2 gap-2 ">
             <a
               className={linkStl}
               href={git}
@@ -43,7 +41,6 @@ const ProjectCard = ({ image, title, desc, git, link }) => {
               <BsGithub className="w-4 h-auto" />
               Github
             </a>
-            {/* link  */}
             {link && (
               <a
                 className={linkStl}
@@ -67,7 +64,7 @@ const ProjectCard = ({ image, title, desc, git, link }) => {
         {/* Back content */}
         <div className="card-back rounded-lg border border-zinc-100 flex flex-col p-3 justify-start">
           <h1 className="text-white text-lg font-[800] space ">{title}</h1>
-          <p className="text-white text-sm font-[500] text-zinc-300 mt-2 space ">
+          <p className="text-white text-sm font-[500] mt-2 space ">
             {desc}
           </p>
           <button

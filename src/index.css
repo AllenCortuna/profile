@@ -58,7 +58,7 @@ body {
 }
 
 /* banner */
-.letter:hover {
+.letter {
   filter: drop-shadow(-2px 2px 0px #5e5e5e);
 }
 

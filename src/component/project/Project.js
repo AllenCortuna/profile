@@ -31,7 +31,7 @@ const Project = () => {
       <span className="flex flex-wrap flex-row mt-10 justify-center gap-16 ">
         <ProjectCard
           image={githubApi}
-          title={"NextJS APP (Github API)"}
+          title={"NextJS App"}
           link={"https://cortuna-repo-list.vercel.app/"}
           git={"https://github.com/AllenCortuna/Next-JS"}
           desc={
@@ -42,7 +42,6 @@ const Project = () => {
         <ProjectCard
           image={roomhunt}
           title={"Roomhunt"}
-          link={"https://roomhunt.vercel.app/"}
           git={"https://github.com/AllenCortuna/roomhunt-client"}
           desc={
             "Roomhunt is a Progressive Web Application build using MERN(MongoDb, ExpressJS, React JS, and Node) this project provides feature for Room Seekers and Accommodators like updating available rooms, sending feedback and allows sending and recieving message."

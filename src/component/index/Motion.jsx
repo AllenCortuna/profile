@@ -29,7 +29,7 @@ const Motion = ({ text, isLeft, image, color }) => {
   const cls = `transition-all ease-linear duration-300 h-[6rem] w-[8rem] flex flex-col text-[1rem] text-white hover:border-4 border-zinc-300 bg-zinc-900 rounded-lg font-bold z-0 drop-shadow-md ${color}`;
   
   return (
-    <div className="hover:rotate-[360deg] transition-all ease-linear duration-300 ">
+    <div className="transition-all ease-linear duration-300 ">
     <motion.div
       ref={ref}
       variants={isLeft ? leftVariant : rightVariant}

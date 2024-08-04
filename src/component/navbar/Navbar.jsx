@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import autoAnimate from "@formkit/auto-animate";
 import Hint from "./Hint";
 import useHint from "../state/hint";
@@ -7,17 +7,30 @@ import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
   const setStat = useHint((state) => state.setStat);
   const dom = React.useRef(null);
-  const [showNav, setShowNav] = React.useState(false);
+  const [showNav, setShowNav] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 440);
 
   // current page name
   const location = useLocation();
   const currentPage = location.pathname;
 
-  React.useEffect(() => {
+  useEffect(() => {
     dom.current && autoAnimate(dom.current);
   }, [dom]);
 
-  const isSmallScreen = window.innerWidth <= 440;
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 440);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const content = [
     { name: "home", to: "", desc: "Welcome ", pageName: "/" },
     {
@@ -48,11 +61,12 @@ const Navbar = () => {
   // content for the navbar
   const nav = (
     <nav
-      className={` my-auto grid gap-2 h-0 p-4 h-full ${!isSmallScreen && "grid-cols-3 py-1"
+      className={`my-auto grid gap-2 h-full p-4 ${!isSmallScreen && "grid-cols-3 py-1"
         }`}
     >
       {content.map((a) => (
         <Link
+          key={a.name}
           to={`/${a.to}`}
           className="flex justify-center content-center w-full md:w-20"
           onClick={() => handleClick(a.name, a.desc)}
@@ -78,11 +92,11 @@ const Navbar = () => {
             className="h-5 w-5 flex flex-wrap align-center justify-center -mb-2 "
           >
             <span
-            className={`${toggleCls}${showNav && "h-5 border rotate-45 bg-zinc-200 "
+              className={`${toggleCls}${showNav && "h-5 border rotate-45 bg-zinc-200 "
                 }`}
             ></span>
             <span
-             className={`${toggleCls}${showNav && "h-5 -mt-3 rotate-45 bg-zinc-900 "
+              className={`${toggleCls}${showNav && "h-5 -mt-3 rotate-45 bg-zinc-900 "
                 }`}
             ></span>
           </span>
@@ -93,14 +107,14 @@ const Navbar = () => {
   );
 
   const otherScreen = (
-      <span className="flex flex-wrap justify-between px-8 py-2">
-        <Hint /> {nav}
-      </span>
+    <span className="flex flex-wrap justify-between px-8 py-2">
+      <Hint /> {nav}
+    </span>
   );
 
   return (
     <div
-      className=" bg-zinc-900 grid w-screen h-auto fixed top-0 z-50 shadow-lg border-b border-zinc-700 "
+      className="bg-zinc-900 grid w-screen h-auto fixed top-0 z-50 shadow-lg border-b border-zinc-700"
       ref={dom}
     >
       {isSmallScreen ? smallScreen : otherScreen}
