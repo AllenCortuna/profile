@@ -3,11 +3,15 @@ import { FaCss3Alt, FaGitAlt } from "react-icons/fa";
 import { TbBrandJavascript,TbBrandLaravel, TbBrandMysql, TbBrandNextjs } from "react-icons/tb";
 import { RiReactjsLine} from "react-icons/ri";
 import { DiMongodb} from "react-icons/di";
+import { IoLogoFirebase } from "react-icons/io5";
 import {
  SiSass,
  SiTailwindcss,
  SiPython,
  SiLaragon,
+ SiTypescript,
+ SiNotion,
+ SiNeovim,
 } from "react-icons/si";
 
 const Skills = () => {
@@ -98,6 +102,34 @@ const Skills = () => {
     isLeft={false}
     color={"hover:border-blue-400 hover:text-blue-400"}
     image={<TbBrandMysql />}
+   />
+
+   <Motion
+    text={"Typescript"}
+    isLeft={true}
+    color={"hover:border-blue-500 hover:text-blue-500"}
+    image={<SiTypescript />}
+   />
+
+   <Motion
+    text={"Notion"}
+    isLeft={false}
+    color={"hover:border-purple-400 hover:text-purple-400"}
+    image={<SiNotion />}
+   />
+
+   <Motion
+    text={"Firebase"}
+    isLeft={true}
+    color={"hover:border-yellow-400 hover:text-yellow-400"}
+    image={<IoLogoFirebase />}
+   />
+
+<Motion
+    text={"Neovim"}
+    isLeft={false}
+    color={"hover:border-lime-500 hover:text-lime-500"}
+    image={<SiNeovim />}
    />
    
 

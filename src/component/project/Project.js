@@ -3,6 +3,7 @@ import ProjectCard from "./ProjectCard";
 import roomhunt from "../img/roomhunt.png";
 import chromeExt from "../img/chromeExtension.png";
 import doctemplate from "../img/doctemplater.png";
+import modeo from "../img/modeo.png";
 import spaceman from "../img/spaceman.json";
 import githubApi from "../img/githubApi.png";
 import Lottie from "react-lottie";
@@ -54,7 +55,7 @@ const Project = () => {
           link={"https://dpwh-modeo-webapp.vercel.app/"}
           git={"https://github.com/AllenCortuna/doctemplater"}
           desc={
-            "Document Templater is a Next.js application that showcase the use of NextResponse from 'next/server'. This project leverages doctemplater to populate a Microsoft Word document template with data from a form input."
+            "Document Templater is a Next.js application that leverages doctemplater to populate a Microsoft Word document template with data from a form input, some part of the application directly write the data into a pdf document and it directly downloaded."
           }
         />
 
@@ -67,6 +68,17 @@ const Project = () => {
             "Chrome extension automatically populates input fields based on the submitted document filename. It was developed to streamline workflow by minimizing repetitive typing and decreasing the likelihood of typographical errors."
           }
         />
+        <ProjectCard
+          image={modeo}
+          title={"Project Information System"}
+          link={""}
+          git={"https://github.com/AllenCortuna/modeo"}
+          desc={
+            "Web application  designed for the DPWH, use for managing public works contracts. The application allows users to create, search, and manage contract information, including details like project names, contract IDs, bidding dates, and other critical project metadata, this meta data is then linked into QR Code attached to the file folder."
+          }
+        />
+
+
       </span>
     </div>
   );
